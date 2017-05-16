@@ -3,6 +3,26 @@
   
     
     <entry>
+      <title><![CDATA[hexo 创建一篇文章]]></title>
+      <url>/2017/05/16/hexo-%E5%88%9B%E5%BB%BA%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+      <content type="html"><![CDATA[<h4 id="一-创建文章"><a href="#一-创建文章" class="headerlink" title="一.创建文章"></a>一.创建文章<hr></h4><p>1.hexo new “postName” #新建文章</p>
+<h4 id="二-设置文章头部-文件被放在source-posts"><a href="#二-设置文章头部-文件被放在source-posts" class="headerlink" title="二.设置文章头部(文件被放在source_posts)"></a>二.设置文章头部(文件被放在source_posts)<hr></h4><p>1.先用<code>markdown</code>编辑器打开文件<br>2.设置表头:<br><figure class="highlight subunit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">title: hexo 创建一篇文章</div><div class="line">layout: post</div><div class="line">date: 2017<span class="string">-05</span><span class="string">-16</span> 15:19:08</div><div class="line">comments: true</div><div class="line"><span class="keyword">tags:</span> [Hexo]</div><div class="line">keywords: hexo,blog</div></pre></td></tr></table></figure></p>
+<p>3.正文</p>
+<h4 id="三-发布到githup"><a href="#三-发布到githup" class="headerlink" title="三.发布到githup"></a>三.发布到githup</h4><p>1.先清除缓存<br><code>hexo clean</code><br>2.发布<br><code>hexo d -g</code></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Blog </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>/2017/05/15/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
