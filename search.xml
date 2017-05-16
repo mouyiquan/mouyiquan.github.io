@@ -3,6 +3,24 @@
   
     
     <entry>
+      <title><![CDATA[hexo 建站分享]]></title>
+      <url>/2017/05/16/hexo-%E5%BB%BA%E7%AB%99%E5%88%86%E4%BA%AB/</url>
+      <content type="html"><![CDATA[<h4 id="一-建站连接分享"><a href="#一-建站连接分享" class="headerlink" title="一.建站连接分享"></a>一.建站连接分享</h4><p><code>link</code> <a href="https://segmentfault.com/a/1190000004947261" target="_blank" rel="external">手把手教学Hexo+Githup pages搭建个人博客</a><br><code>link</code> <a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external"> markdown半小时入门分享</a></p>
+<h4 id="二-建站遇到的问题"><a href="#二-建站遇到的问题" class="headerlink" title="二.建站遇到的问题"></a>二.建站遇到的问题</h4><p>当hexo d -g出错，找不到git时，看我之前的一篇<a href="https://ctbumyq.github.io/2017/05/16/hexo-d-%E5%87%BA%E9%94%99/">hexo -d错误解决</a>。</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 静态建站 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[hexo d 出错]]></title>
       <url>/2017/05/16/hexo-d-%E5%87%BA%E9%94%99/</url>
       <content type="html"><![CDATA[<h4 id="一-找不到git部署"><a href="#一-找不到git部署" class="headerlink" title="一.找不到git部署"></a>一.找不到git部署</h4><p><code>error</code> ERROR Deployer not found: git<br><code>原因</code> 没有部署hexo-deployer-git<br><code>解决方案</code> npm install hexo-deployer-git –save</p>
