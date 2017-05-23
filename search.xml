@@ -3,10 +3,35 @@
   
     
     <entry>
+      <title><![CDATA[hexo generate 执行时报 offset 错误]]></title>
+      <url>/2017/05/24/hexo-generate-%E6%89%A7%E8%A1%8C%E6%97%B6%E6%8A%A5-offset-%E9%94%99%E8%AF%AF/</url>
+      <content type="html"><![CDATA[<h4 id="一、hexo-g-出错"><a href="#一、hexo-g-出错" class="headerlink" title="一、hexo g 出错"></a>一、hexo g 出错</h4><p>截图： <img src="imgs/timezone.png"><br>原因：我在_confing.yml下 timezone配置错了  </p>
+<p>错误配置： timezone： ChongQing</p>
+<p>如果设置cheng +08:00 后 momentjs解析会报异常<br>需要将timezone配置成 时区名称：<br><img src="imgs/timezone1.png"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> hexo报错 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> error </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[learn markdown]]></title>
       <url>/2017/05/24/learn-markdown/</url>
-      <content type="html"><![CDATA[<h4 id="markdown语法学习"><a href="#markdown语法学习" class="headerlink" title="markdown语法学习"></a>markdown语法学习</h4><h3 id="一、markdown学习分享"><a href="#一、markdown学习分享" class="headerlink" title="一、markdown学习分享"></a>一、markdown学习分享</h3><p>‘link’[markdown语法大全][1]</p>
-<h3 id="二、markdown推荐编辑器"><a href="#二、markdown推荐编辑器" class="headerlink" title="二、markdown推荐编辑器"></a>二、markdown推荐编辑器</h3><p>小书匠、未知笔记、cmd markdown<br>[1]：<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">https://www.zybuluo.com/mdeditor</a></p>
+      <content type="html"><![CDATA[<h3 id="一、markdown学习分享"><a href="#一、markdown学习分享" class="headerlink" title="一、markdown学习分享"></a>一、markdown学习分享</h3><p> <code>link</code> <a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">markdown语法学习大全</a></p>
+<h3 id="二、markdown推荐编辑器"><a href="#二、markdown推荐编辑器" class="headerlink" title="二、markdown推荐编辑器"></a>二、markdown推荐编辑器</h3><p>小书匠、未知笔记、cmd markdown</p>
 ]]></content>
       
         <categories>
