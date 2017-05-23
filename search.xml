@@ -12,7 +12,7 @@
       
         <categories>
             
-            <category> hexo报错 </category>
+            <category> Hexo报错 </category>
             
         </categories>
         
@@ -36,7 +36,7 @@
       
         <categories>
             
-            <category> markdown </category>
+            <category> Markdown </category>
             
         </categories>
         
@@ -56,10 +56,16 @@
 <h4 id="二-建站遇到的问题"><a href="#二-建站遇到的问题" class="headerlink" title="二.建站遇到的问题"></a>二.建站遇到的问题</h4><p>当hexo d -g出错，找不到git时，看我之前的一篇<a href="https://ctbumyq.github.io/2017/05/16/hexo-d-%E5%87%BA%E9%94%99/">hexo -d错误解决</a>。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> Hexo </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> Hexo </tag>
+            <tag> hexo </tag>
             
             <tag> 静态建站 </tag>
             
@@ -74,12 +80,18 @@
 <h4 id="二-当我们首次安装hexo时修改了hexo的-config-yml时不生效"><a href="#二-当我们首次安装hexo时修改了hexo的-config-yml时不生效" class="headerlink" title="二.当我们首次安装hexo时修改了hexo的_config.yml时不生效"></a>二.当我们首次安装hexo时修改了hexo的_config.yml时不生效</h4><p>解决方案同上</p>
 ]]></content>
       
+        <categories>
+            
+            <category> Hexo报错 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> Hexo </tag>
+            <tag> hexo </tag>
             
-            <tag> ERROR </tag>
+            <tag> error </tag>
             
         </tags>
         
@@ -94,12 +106,18 @@
 <h4 id="三-发布到githup"><a href="#三-发布到githup" class="headerlink" title="三.发布到githup"></a>三.发布到githup</h4><p>1.先清除缓存<br><code>hexo clean</code><br>2.发布<br><code>hexo d -g</code></p>
 ]]></content>
       
+        <categories>
+            
+            <category> Hexo学习 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> Hexo </tag>
+            <tag> hexo </tag>
             
-            <tag> Blog </tag>
+            <tag> blog </tag>
             
         </tags>
         
