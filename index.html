@@ -164,6 +164,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-windows下用cmd命令新建用户" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/24/windows下用cmd命令新建用户/">windows下用cmd命令新建用户</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/24/windows下用cmd命令新建用户/" class="archive-article-date">
+  	<time datetime="2017-05-24T13:35:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、打-开DOS操作窗口，点击“开始”菜单，选择“命令提示符”"><a href="#一、打-开DOS操作窗口，点击“开始”菜单，选择“命令提示符”" class="headerlink" title="一、打 开DOS操作窗口，点击“开始”菜单，选择“命令提示符”"></a>一、打 开DOS操作窗口，点击“开始”菜单，选择“命令提示符”</h3><p><code>快捷键</code>: windows+r 然后输入cmd</p>
+<h3 id="二、添加账号net-user-test-test123-add"><a href="#二、添加账号net-user-test-test123-add" class="headerlink" title="二、添加账号net user test test123 /add"></a>二、添加账号net user test test123 /add</h3><p><img src="imgs/useradd.png"></p>
+<h3 id="三、添加管理员权限net-localgroup-Administrators-test-add"><a href="#三、添加管理员权限net-localgroup-Administrators-test-add" class="headerlink" title="三、添加管理员权限net localgroup Administrators test /add"></a>三、添加管理员权限net localgroup Administrators test /add</h3><p><img src="imgs/poweradd.png"></p>
+<h3 id="四、查看用户权限net-localgroup-administrators或者net-user-test"><a href="#四、查看用户权限net-localgroup-administrators或者net-user-test" class="headerlink" title="四、查看用户权限net localgroup administrators或者net user test"></a>四、查看用户权限net localgroup administrators或者net user test</h3><p><img src="imgs/powerStatus1.png"><br>或者<br><img src="imgs/powerStatus2.png"></p>
+<h3 id="五、删除权限net-localgroup-administrators-test-del"><a href="#五、删除权限net-localgroup-administrators-test-del" class="headerlink" title="五、删除权限net localgroup administrators test /del"></a>五、删除权限net localgroup administrators test /del</h3><p><img src="imgs/powerdel.png"></p>
+<h3 id="六、删除账号net-user-test-del"><a href="#六、删除账号net-user-test-del" class="headerlink" title="六、删除账号net user test /del"></a>六、删除账号net user test /del</h3><p><img src="imgs/userdel.png"></p>
+<h3 id="七、查看账号net-users"><a href="#七、查看账号net-users" class="headerlink" title="七、查看账号net users"></a>七、查看账号net users</h3><p><img src="imgs/userStatus.png"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">windowsCmd</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/WindowsCmd/" class="article-tag-list-link color1">WindowsCmd</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/24/windows下用cmd命令新建用户/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-hexo-generate-执行时报-offset-错误" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -461,83 +537,6 @@
 
 
   
-    <article id="post-hexo-创建一篇文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/16/hexo-创建一篇文章/">hexo 创建一篇文章</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/16/hexo-创建一篇文章/" class="archive-article-date">
-  	<time datetime="2017-05-16T07:19:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="一-创建文章"><a href="#一-创建文章" class="headerlink" title="一.创建文章"></a>一.创建文章</h4><p>1.hexo new “postName” #新建文章</p>
-<h4 id="二-设置文章头部-文件被放在source-posts"><a href="#二-设置文章头部-文件被放在source-posts" class="headerlink" title="二.设置文章头部(文件被放在source/_posts)"></a>二.设置文章头部(文件被放在source/_posts)</h4><p>1.先用<code>markdown</code>编辑器打开文件<br>2.设置表头:<br><figure class="highlight subunit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">title: hexo 创建一篇文章</div><div class="line">layout: post</div><div class="line">date: 2017<span class="string">-05</span><span class="string">-16</span> 15:19:08</div><div class="line">comments: true</div><div class="line"><span class="keyword">tags:</span> [Hexo]</div><div class="line">keywords: hexo,blog</div></pre></td></tr></table></figure></p>
-<p>3.正文</p>
-<h4 id="三-发布到githup"><a href="#三-发布到githup" class="headerlink" title="三.发布到githup"></a>三.发布到githup</h4><p>1.先清除缓存<br><code>hexo clean</code><br>2.发布<br><code>hexo d -g</code></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo学习/" class="article-tag-list-link color2">Hexo学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/16/hexo-创建一篇文章/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -672,6 +671,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">windowsCmd</a>
               </li>
             
             <div class="clearfix"></div>

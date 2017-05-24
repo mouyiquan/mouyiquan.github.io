@@ -3,6 +3,33 @@
   
     
     <entry>
+      <title><![CDATA[windows下用cmd命令新建用户]]></title>
+      <url>/2017/05/24/windows%E4%B8%8B%E7%94%A8cmd%E5%91%BD%E4%BB%A4%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7/</url>
+      <content type="html"><![CDATA[<h3 id="一、打-开DOS操作窗口，点击“开始”菜单，选择“命令提示符”"><a href="#一、打-开DOS操作窗口，点击“开始”菜单，选择“命令提示符”" class="headerlink" title="一、打 开DOS操作窗口，点击“开始”菜单，选择“命令提示符”"></a>一、打 开DOS操作窗口，点击“开始”菜单，选择“命令提示符”</h3><p><code>快捷键</code>: windows+r 然后输入cmd</p>
+<h3 id="二、添加账号net-user-test-test123-add"><a href="#二、添加账号net-user-test-test123-add" class="headerlink" title="二、添加账号net user test test123 /add"></a>二、添加账号net user test test123 /add</h3><p><img src="imgs/useradd.png"></p>
+<h3 id="三、添加管理员权限net-localgroup-Administrators-test-add"><a href="#三、添加管理员权限net-localgroup-Administrators-test-add" class="headerlink" title="三、添加管理员权限net localgroup Administrators test /add"></a>三、添加管理员权限net localgroup Administrators test /add</h3><p><img src="imgs/poweradd.png"></p>
+<h3 id="四、查看用户权限net-localgroup-administrators或者net-user-test"><a href="#四、查看用户权限net-localgroup-administrators或者net-user-test" class="headerlink" title="四、查看用户权限net localgroup administrators或者net user test"></a>四、查看用户权限net localgroup administrators或者net user test</h3><p><img src="imgs/powerStatus1.png"><br>或者<br><img src="imgs/powerStatus2.png"></p>
+<h3 id="五、删除权限net-localgroup-administrators-test-del"><a href="#五、删除权限net-localgroup-administrators-test-del" class="headerlink" title="五、删除权限net localgroup administrators test /del"></a>五、删除权限net localgroup administrators test /del</h3><p><img src="imgs/powerdel.png"></p>
+<h3 id="六、删除账号net-user-test-del"><a href="#六、删除账号net-user-test-del" class="headerlink" title="六、删除账号net user test /del"></a>六、删除账号net user test /del</h3><p><img src="imgs/userdel.png"></p>
+<h3 id="七、查看账号net-users"><a href="#七、查看账号net-users" class="headerlink" title="七、查看账号net users"></a>七、查看账号net users</h3><p><img src="imgs/userStatus.png"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> WindowsCmd </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> windowsCmd </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[hexo generate 执行时报 offset 错误]]></title>
       <url>/2017/05/24/hexo-generate-%E6%89%A7%E8%A1%8C%E6%97%B6%E6%8A%A5-offset-%E9%94%99%E8%AF%AF/</url>
       <content type="html"><![CDATA[<h4 id="一、hexo-g-出错"><a href="#一、hexo-g-出错" class="headerlink" title="一、hexo g 出错"></a>一、hexo g 出错</h4><p>截图： <img src="imgs/timezone.png"><br>原因：我在_confing.yml下 timezone配置错了  </p>
@@ -144,12 +171,6 @@
   
     
     <entry>
-      <title><![CDATA[about]]></title>
-      <url>/about/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[categories]]></title>
       <url>/categories/index.html</url>
       <content type="html"></content>
@@ -158,6 +179,12 @@
     <entry>
       <title><![CDATA[tags]]></title>
       <url>/tags/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[about]]></title>
+      <url>/about/index.html</url>
       <content type="html"></content>
     </entry>
     
