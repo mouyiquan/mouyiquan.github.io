@@ -3,6 +3,32 @@
   
     
     <entry>
+      <title><![CDATA[Cant connect to MYSQL server on localhost(10038)]]></title>
+      <url>/2017/05/26/Cant-connect-to-MYSQL-server-on-localhost-10038/</url>
+      <content type="html"><![CDATA[<h3 id="一、错误原因"><a href="#一、错误原因" class="headerlink" title="一、错误原因"></a>一、错误原因</h3><p>When Navicate connect Mysql，this Service is off.<br><img src="imgs/mysqlErrorNotConnect.png"></p>
+<h3 id="二、解决方案"><a href="#二、解决方案" class="headerlink" title="二、解决方案"></a>二、解决方案</h3><h4 id="1-打开任务管理器并切换选项卡到服务"><a href="#1-打开任务管理器并切换选项卡到服务" class="headerlink" title="1.打开任务管理器并切换选项卡到服务"></a>1.打开任务管理器并切换选项卡到服务</h4><p><img src="imgs/taskManage.png"></p>
+<h4 id="2-点击服务"><a href="#2-点击服务" class="headerlink" title="2.点击服务"></a>2.点击服务</h4><p><img src="imgs/service.png"></p>
+<h4 id="3-选择MYSQL并右键启动即可"><a href="#3-选择MYSQL并右键启动即可" class="headerlink" title="3.选择MYSQL并右键启动即可"></a>3.选择MYSQL并右键启动即可</h4><p><img src="imgs/allService.png"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> MysqlError </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> mysql </tag>
+            
+            <tag> error </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[windows下用cmd命令新建用户]]></title>
       <url>/2017/05/24/windows%E4%B8%8B%E7%94%A8cmd%E5%91%BD%E4%BB%A4%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7/</url>
       <content type="html"><![CDATA[<h3 id="一、打-开DOS操作窗口，点击“开始”菜单，选择“命令提示符”"><a href="#一、打-开DOS操作窗口，点击“开始”菜单，选择“命令提示符”" class="headerlink" title="一、打 开DOS操作窗口，点击“开始”菜单，选择“命令提示符”"></a>一、打 开DOS操作窗口，点击“开始”菜单，选择“命令提示符”</h3><p><code>快捷键</code>: windows+r 然后输入cmd</p>
@@ -46,9 +72,9 @@
         
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> error </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
         
@@ -116,9 +142,9 @@
         
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> error </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
         
@@ -171,6 +197,12 @@
   
     
     <entry>
+      <title><![CDATA[about]]></title>
+      <url>/about/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[categories]]></title>
       <url>/categories/index.html</url>
       <content type="html"></content>
@@ -179,12 +211,6 @@
     <entry>
       <title><![CDATA[tags]]></title>
       <url>/tags/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[about]]></title>
-      <url>/about/index.html</url>
       <content type="html"></content>
     </entry>
     
