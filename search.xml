@@ -3,6 +3,66 @@
   
     
     <entry>
+      <title><![CDATA[http知识之状态码]]></title>
+      <url>/2017/06/04/http%E7%9F%A5%E8%AF%86%E4%B9%8B%E7%8A%B6%E6%80%81%E7%A0%81/</url>
+      <content type="html"><![CDATA[<h3 id="一、Http状态码"><a href="#一、Http状态码" class="headerlink" title="一、Http状态码"></a>一、Http状态码</h3><table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>对应的信息</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1xx</td>
+<td>表示请求已经接受，继续处理</td>
+</tr>
+<tr>
+<td>2xx</td>
+<td>表示成功处理</td>
+</tr>
+<tr>
+<td>3xx</td>
+<td>表示重定向</td>
+</tr>
+<tr>
+<td>4xx</td>
+<td>客服端错误，语法错误</td>
+</tr>
+<tr>
+<td>5xx</td>
+<td>服务器端错误</td>
+</tr>
+</tbody>
+</table>
+<h3 id="二、常出现的状态码"><a href="#二、常出现的状态码" class="headerlink" title="二、常出现的状态码"></a>二、常出现的状态码</h3><h4 id="1-200"><a href="#1-200" class="headerlink" title="1.==200=="></a>1.==200==</h4><p>接受处理成功</p>
+<h4 id="2-304"><a href="#2-304" class="headerlink" title="2.==304=="></a>2.==304==</h4><p>资源重定向(解决方案:清楚缓存)</p>
+<h4 id="3-400"><a href="#3-400" class="headerlink" title="3.==400=="></a>3.==400==</h4><p>客户端请求语法错误</p>
+<h4 id="4-401"><a href="#4-401" class="headerlink" title="4.==401=="></a>4.==401==</h4><p>请求没有经过授权</p>
+<h4 id="5-403"><a href="#5-403" class="headerlink" title="5.==403=="></a>5.==403==</h4><p>服务器端收到请求，但是拒绝了（可能是没有权限）</p>
+<h4 id="6-404"><a href="#6-404" class="headerlink" title="6.==404=="></a>6.==404==</h4><p>没找到，对象不存在(或者输错地址url)</p>
+<h4 id="7-500"><a href="#7-500" class="headerlink" title="7.==500=="></a>7.==500==</h4><p>服务器端发生了一个不可预期的错误</p>
+<h4 id="8-503"><a href="#8-503" class="headerlink" title="8.==503=="></a>8.==503==</h4><p>服务器端当前还不能处理这个请求，过段时间才能恢复正常</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Http知识 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Http知识 </tag>
+            
+            <tag> 状态码 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[送给我的学弟学妹们]]></title>
       <url>/2017/06/01/%E9%80%81%E7%BB%99%E6%88%91%E7%9A%84%E5%AD%A6%E5%BC%9F%E5%AD%A6%E5%A6%B9%E4%BB%AC/</url>
       <content type="html"><![CDATA[<h1 id="不忘初心-方得始终"><a href="#不忘初心-方得始终" class="headerlink" title="不忘初心 方得始终"></a>不忘初心 方得始终</h1><h4 id="欢迎各位高中的小伙伴们来到我的博客"><a href="#欢迎各位高中的小伙伴们来到我的博客" class="headerlink" title="欢迎各位高中的小伙伴们来到我的博客"></a>欢迎各位高中的小伙伴们来到我的博客</h4><hr>
@@ -293,14 +353,14 @@
     </entry>
     
     <entry>
-      <title><![CDATA[about]]></title>
-      <url>/about/index.html</url>
+      <title><![CDATA[tags]]></title>
+      <url>/tags/index.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
-      <title><![CDATA[tags]]></title>
-      <url>/tags/index.html</url>
+      <title><![CDATA[about]]></title>
+      <url>/about/index.html</url>
       <content type="html"></content>
     </entry>
     
