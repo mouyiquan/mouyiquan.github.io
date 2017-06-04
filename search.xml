@@ -3,6 +3,28 @@
   
     
     <entry>
+      <title><![CDATA[http概念进阶]]></title>
+      <url>/2017/06/04/http%E6%A6%82%E5%BF%B5%E8%BF%9B%E9%98%B6/</url>
+      <content type="html"></content>
+      
+        <categories>
+            
+            <category> Http知识 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Http知识 </tag>
+            
+            <tag> Http概念进阶 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[http知识之状态码]]></title>
       <url>/2017/06/04/http%E7%9F%A5%E8%AF%86%E4%B9%8B%E7%8A%B6%E6%80%81%E7%A0%81/</url>
       <content type="html"><![CDATA[<h3 id="一、Http状态码"><a href="#一、Http状态码" class="headerlink" title="一、Http状态码"></a>一、Http状态码</h3><table>
@@ -155,10 +177,10 @@
     <entry>
       <title><![CDATA[Cant connect to MYSQL server on localhost(10038)]]></title>
       <url>/2017/05/26/Cant-connect-to-MYSQL-server-on-localhost-10038/</url>
-      <content type="html"><![CDATA[<h3 id="一、错误原因"><a href="#一、错误原因" class="headerlink" title="一、错误原因"></a>一、错误原因</h3><p>When Navicate connect Mysql，this Service is off.<br><img src="imgs/mysqlErrorNotConnect.png"></p>
-<h3 id="二、解决方案"><a href="#二、解决方案" class="headerlink" title="二、解决方案"></a>二、解决方案</h3><h4 id="1-打开任务管理器并切换选项卡到服务"><a href="#1-打开任务管理器并切换选项卡到服务" class="headerlink" title="1.打开任务管理器并切换选项卡到服务"></a>1.打开任务管理器并切换选项卡到服务</h4><p><img src="imgs/taskManage.png"></p>
-<h4 id="2-点击服务"><a href="#2-点击服务" class="headerlink" title="2.点击服务"></a>2.点击服务</h4><p><img src="imgs/service.png"></p>
-<h4 id="3-选择MYSQL并右键启动即可"><a href="#3-选择MYSQL并右键启动即可" class="headerlink" title="3.选择MYSQL并右键启动即可"></a>3.选择MYSQL并右键启动即可</h4><p><img src="imgs/allService.png"></p>
+      <content type="html"><![CDATA[<h3 id="一、错误原因"><a href="#一、错误原因" class="headerlink" title="一、错误原因"></a>一、错误原因</h3><p>When Navicate connect Mysql，this Service is off.<br><img src="/imgs/mysqlErrorNotConnect.png"></p>
+<h3 id="二、解决方案"><a href="#二、解决方案" class="headerlink" title="二、解决方案"></a>二、解决方案</h3><h4 id="1-打开任务管理器并切换选项卡到服务"><a href="#1-打开任务管理器并切换选项卡到服务" class="headerlink" title="1.打开任务管理器并切换选项卡到服务"></a>1.打开任务管理器并切换选项卡到服务</h4><p><img src="/imgs/taskManage.png"></p>
+<h4 id="2-点击服务"><a href="#2-点击服务" class="headerlink" title="2.点击服务"></a>2.点击服务</h4><p><img src="/imgs/service.png"></p>
+<h4 id="3-选择MYSQL并右键启动即可"><a href="#3-选择MYSQL并右键启动即可" class="headerlink" title="3.选择MYSQL并右键启动即可"></a>3.选择MYSQL并右键启动即可</h4><p><img src="/imgs/allService.png"></p>
 ]]></content>
       
         <categories>
@@ -170,9 +192,9 @@
         
         <tags>
             
-            <tag> error </tag>
-            
             <tag> mysql </tag>
+            
+            <tag> error </tag>
             
         </tags>
         
@@ -182,12 +204,12 @@
       <title><![CDATA[windows下用cmd命令新建用户]]></title>
       <url>/2017/05/24/windows%E4%B8%8B%E7%94%A8cmd%E5%91%BD%E4%BB%A4%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7/</url>
       <content type="html"><![CDATA[<h3 id="一、打-开DOS操作窗口，点击“开始”菜单，选择“命令提示符”"><a href="#一、打-开DOS操作窗口，点击“开始”菜单，选择“命令提示符”" class="headerlink" title="一、打 开DOS操作窗口，点击“开始”菜单，选择“命令提示符”"></a>一、打 开DOS操作窗口，点击“开始”菜单，选择“命令提示符”</h3><p><code>快捷键</code>: windows+r 然后输入cmd</p>
-<h3 id="二、添加账号net-user-test-test123-add"><a href="#二、添加账号net-user-test-test123-add" class="headerlink" title="二、添加账号net user test test123 /add"></a>二、添加账号net user test test123 /add</h3><p><img src="imgs/useradd.png"></p>
-<h3 id="三、添加管理员权限net-localgroup-Administrators-test-add"><a href="#三、添加管理员权限net-localgroup-Administrators-test-add" class="headerlink" title="三、添加管理员权限net localgroup Administrators test /add"></a>三、添加管理员权限net localgroup Administrators test /add</h3><p><img src="imgs/poweradd.png"></p>
-<h3 id="四、查看用户权限net-localgroup-administrators或者net-user-test"><a href="#四、查看用户权限net-localgroup-administrators或者net-user-test" class="headerlink" title="四、查看用户权限net localgroup administrators或者net user test"></a>四、查看用户权限net localgroup administrators或者net user test</h3><p><img src="imgs/powerStatus1.png"><br>或者<br><img src="imgs/powerStatus2.png"></p>
-<h3 id="五、删除权限net-localgroup-administrators-test-del"><a href="#五、删除权限net-localgroup-administrators-test-del" class="headerlink" title="五、删除权限net localgroup administrators test /del"></a>五、删除权限net localgroup administrators test /del</h3><p><img src="imgs/powerdel.png"></p>
-<h3 id="六、删除账号net-user-test-del"><a href="#六、删除账号net-user-test-del" class="headerlink" title="六、删除账号net user test /del"></a>六、删除账号net user test /del</h3><p><img src="imgs/userdel.png"></p>
-<h3 id="七、查看账号net-users"><a href="#七、查看账号net-users" class="headerlink" title="七、查看账号net users"></a>七、查看账号net users</h3><p><img src="imgs/userStatus.png"></p>
+<h3 id="二、添加账号net-user-test-test123-add"><a href="#二、添加账号net-user-test-test123-add" class="headerlink" title="二、添加账号net user test test123 /add"></a>二、添加账号net user test test123 /add</h3><p><img src="/imgs/useradd.png"></p>
+<h3 id="三、添加管理员权限net-localgroup-Administrators-test-add"><a href="#三、添加管理员权限net-localgroup-Administrators-test-add" class="headerlink" title="三、添加管理员权限net localgroup Administrators test /add"></a>三、添加管理员权限net localgroup Administrators test /add</h3><p><img src="/imgs/poweradd.png"></p>
+<h3 id="四、查看用户权限net-localgroup-administrators或者net-user-test"><a href="#四、查看用户权限net-localgroup-administrators或者net-user-test" class="headerlink" title="四、查看用户权限net localgroup administrators或者net user test"></a>四、查看用户权限net localgroup administrators或者net user test</h3><p><img src="/imgs/powerStatus1.png"><br>或者<br><img src="/imgs/powerStatus2.png"></p>
+<h3 id="五、删除权限net-localgroup-administrators-test-del"><a href="#五、删除权限net-localgroup-administrators-test-del" class="headerlink" title="五、删除权限net localgroup administrators test /del"></a>五、删除权限net localgroup administrators test /del</h3><p><img src="/imgs/powerdel.png"></p>
+<h3 id="六、删除账号net-user-test-del"><a href="#六、删除账号net-user-test-del" class="headerlink" title="六、删除账号net user test /del"></a>六、删除账号net user test /del</h3><p><img src="/imgs/userdel.png"></p>
+<h3 id="七、查看账号net-users"><a href="#七、查看账号net-users" class="headerlink" title="七、查看账号net users"></a>七、查看账号net users</h3><p><img src="/imgs/userStatus.png"></p>
 ]]></content>
       
         <categories>
@@ -208,9 +230,9 @@
     <entry>
       <title><![CDATA[hexo generate 执行时报 offset 错误]]></title>
       <url>/2017/05/24/hexo-generate-%E6%89%A7%E8%A1%8C%E6%97%B6%E6%8A%A5-offset-%E9%94%99%E8%AF%AF/</url>
-      <content type="html"><![CDATA[<h4 id="一、hexo-g-出错"><a href="#一、hexo-g-出错" class="headerlink" title="一、hexo g 出错"></a>一、hexo g 出错</h4><p>截图： <img src="imgs/timezone.png"><br>原因：我在_confing.yml下 timezone配置错了  </p>
+      <content type="html"><![CDATA[<h4 id="一、hexo-g-出错"><a href="#一、hexo-g-出错" class="headerlink" title="一、hexo g 出错"></a>一、hexo g 出错</h4><p>截图： <img src="/imgs/timezone.png"><br>原因：我在_confing.yml下 timezone配置错了  </p>
 <p>错误配置： timezone： ChongQing</p>
-<p>如果设置cheng +08:00 后 momentjs解析会报异常<br>需要将timezone配置成 时区名称：<br><img src="imgs/timezone1.png"></p>
+<p>如果设置cheng +08:00 后 momentjs解析会报异常<br>需要将timezone配置成 时区名称：<br><img src="/imgs/timezone1.png"></p>
 ]]></content>
       
         <categories>
@@ -222,9 +244,9 @@
         
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> error </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
         
@@ -292,9 +314,9 @@
         
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> error </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
         
@@ -347,8 +369,8 @@
   
     
     <entry>
-      <title><![CDATA[categories]]></title>
-      <url>/categories/index.html</url>
+      <title><![CDATA[about]]></title>
+      <url>/about/index.html</url>
       <content type="html"></content>
     </entry>
     
@@ -359,8 +381,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[about]]></title>
-      <url>/about/index.html</url>
+      <title><![CDATA[categories]]></title>
+      <url>/categories/index.html</url>
       <content type="html"></content>
     </entry>
     
