@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://ctbumyq.github.io">
   <title>http概念进阶 | 牟一全的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="做自己爱做的事，爱自己再做的事">
+  <meta name="description" content="什么是回调？什么是异步/同步？什么是I/O？什么是单线程/多线程什么是阻塞/非阻塞什么是事件？什么是事件驱动？什么是基于事件驱动归档回调？什么事事件循环？">
 <meta name="keywords" content="http概念进阶，http知识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="http概念进阶">
 <meta property="og:url" content="https://ctbumyq.github.io/2017/06/04/http概念进阶/index.html">
 <meta property="og:site_name" content="牟一全的博客">
-<meta property="og:description" content="做自己爱做的事，爱自己再做的事">
-<meta property="og:updated_time" content="2017-06-04T10:49:18.716Z">
+<meta property="og:description" content="什么是回调？什么是异步/同步？什么是I/O？什么是单线程/多线程什么是阻塞/非阻塞什么是事件？什么是事件驱动？什么是基于事件驱动归档回调？什么事事件循环？">
+<meta property="og:updated_time" content="2017-06-04T12:33:26.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http概念进阶">
-<meta name="twitter:description" content="做自己爱做的事，爱自己再做的事">
+<meta name="twitter:description" content="什么是回调？什么是异步/同步？什么是I/O？什么是单线程/多线程什么是阻塞/非阻塞什么是事件？什么是事件驱动？什么是基于事件驱动归档回调？什么事事件循环？">
   
     <link rel="alternative" href="/atom.xml" title="牟一全的博客" type="application/atom+xml">
   
@@ -184,7 +184,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="什么是回调？"><a href="#什么是回调？" class="headerlink" title="什么是回调？"></a>什么是回调？</h3><h3 id="什么是异步-同步？"><a href="#什么是异步-同步？" class="headerlink" title="什么是异步/同步？"></a>什么是异步/同步？</h3><h3 id="什么是I-O？"><a href="#什么是I-O？" class="headerlink" title="什么是I/O？"></a>什么是I/O？</h3><h3 id="什么是单线程-多线程"><a href="#什么是单线程-多线程" class="headerlink" title="什么是单线程/多线程"></a>什么是单线程/多线程</h3><h3 id="什么是阻塞-非阻塞"><a href="#什么是阻塞-非阻塞" class="headerlink" title="什么是阻塞/非阻塞"></a>什么是阻塞/非阻塞</h3><h3 id="什么是事件？"><a href="#什么是事件？" class="headerlink" title="什么是事件？"></a>什么是事件？</h3><h3 id="什么是事件驱动？"><a href="#什么是事件驱动？" class="headerlink" title="什么是事件驱动？"></a>什么是事件驱动？</h3><h3 id="什么是基于事件驱动归档回调？"><a href="#什么是基于事件驱动归档回调？" class="headerlink" title="什么是基于事件驱动归档回调？"></a>什么是基于事件驱动归档回调？</h3><h3 id="什么事事件循环？"><a href="#什么事事件循环？" class="headerlink" title="什么事事件循环？"></a>什么事事件循环？</h3>
       
 
       
@@ -312,6 +312,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/06/04/Node.js概述及安装/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          node.js概述及安装
+        
+      </div>
+    </a>
   
   
     <a href="/2017/06/04/http知识之状态码/" id="article-nav-older" class="article-nav-link-wrap">
@@ -444,6 +453,14 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Node.js小爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">月总结</a>
               </li>
              
@@ -452,11 +469,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">error</a>
+                <a href="javascript:void(0)" class="js-tag color5">Node.js安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -464,7 +477,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">静态建站</a>
+                <a href="javascript:void(0)" class="js-tag color1">error</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -476,15 +493,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Node.js入门编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">静态建站</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">状态码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">

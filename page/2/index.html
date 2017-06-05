@@ -164,30 +164,32 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Cant-connect-to-MYSQL-server-on-localhost-10038" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Node.js概述及安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/26/Cant-connect-to-MYSQL-server-on-localhost-10038/">Cant connect to MYSQL server on localhost(10038)</a>
+      <a class="article-title" href="/2017/06/04/Node.js概述及安装/">node.js概述及安装</a>
     </h1>
   
 
         
-        <a href="/2017/05/26/Cant-connect-to-MYSQL-server-on-localhost-10038/" class="archive-article-date">
-  	<time datetime="2017-05-26T08:34:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-26</time>
+        <a href="/2017/06/04/Node.js概述及安装/" class="archive-article-date">
+  	<time datetime="2017-06-04T15:19:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="一、错误原因"><a href="#一、错误原因" class="headerlink" title="一、错误原因"></a>一、错误原因</h3><p>When Navicate connect Mysql，this Service is off.<br><img src="/imgs/mysqlErrorNotConnect.png"></p>
-<h3 id="二、解决方案"><a href="#二、解决方案" class="headerlink" title="二、解决方案"></a>二、解决方案</h3><h4 id="1-打开任务管理器并切换选项卡到服务"><a href="#1-打开任务管理器并切换选项卡到服务" class="headerlink" title="1.打开任务管理器并切换选项卡到服务"></a>1.打开任务管理器并切换选项卡到服务</h4><p><img src="/imgs/taskManage.png"></p>
-<h4 id="2-点击服务"><a href="#2-点击服务" class="headerlink" title="2.点击服务"></a>2.点击服务</h4><p><img src="/imgs/service.png"></p>
-<h4 id="3-选择MYSQL并右键启动即可"><a href="#3-选择MYSQL并右键启动即可" class="headerlink" title="3.选择MYSQL并右键启动即可"></a>3.选择MYSQL并右键启动即可</h4><p><img src="/imgs/allService.png"></p>
+        <h3 id="一、Node-js是什么-emsp"><a href="#一、Node-js是什么-emsp" class="headerlink" title="一、Node.js是什么&emsp;"></a>一、Node.js是什么&emsp;</h3><p>&emsp;Node.js不是一门独立的语言，与PHP、java、.net及是开发语言也是平台不同，也不是javaScript的框架jquery等，更不是浏览器库ExtJs,不能与ExtJs相提并论。Node.js是一个让JavaScript运行在服务器端的开发平台。</p>
+<h3 id="二、Node-js能做什么"><a href="#二、Node-js能做什么" class="headerlink" title="二、Node.js能做什么?"></a>二、Node.js能做什么?</h3><p>&emsp;JaveScript是由客服端而产生，Node.js为网络而生。<br>&emsp;应用:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>复杂逻辑的网站</div><div class="line"><span class="number">2.</span>社交网络的大Web的应用</div><div class="line"><span class="number">3.</span>b Socket服务器</div><div class="line"><span class="number">4.</span>P/UDP套间字应用程序</div><div class="line"><span class="number">5.</span>行工具</div><div class="line"><span class="number">6.</span>式终端程序</div></pre></td></tr></table></figure></p>
+<h3 id="三、异步I-O与事件驱动"><a href="#三、异步I-O与事件驱动" class="headerlink" title="三、异步I/O与事件驱动"></a>三、异步I/O与事件驱动</h3><p>&emsp;Node.js最大的特性就是采用异步式I/O与事件驱动的架构设计。对于高并发的解决方案，传统的架构是多线程模型，也就是为每个业务逻辑提供一个系统线程，通过系统线程切换来弥补同步式I/O调用时的时间开销。Node.js使用的单线程模型，在执行的过程中会维护一个事件队列，程序在执行时进入时间循环等待下一个事件的到来。<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="section">普通: </span></div><div class="line">res=db.query(<span class="string">"select * from user"</span>);</div><div class="line">res.output();</div><div class="line"><span class="section">Node.js:</span></div><div class="line">res=db.query(<span class="string">"select * from user"</span>,function(res)&#123;</div><div class="line">	res.output();</div><div class="line"><span class="section">&#125;):</span></div></pre></td></tr></table></figure></p>
+<p>程序会自动向下执行</p>
+<h3 id="四、浏览器引擎革命"><a href="#四、浏览器引擎革命" class="headerlink" title="四、浏览器引擎革命"></a>四、浏览器引擎革命</h3><p>Google Chrome的引擎是V8。Node.js的引擎引用的就是V8。所以它块，为什么ExtJs在Chrome如此的快，就是因为它。</p>
+<h3 id="五、部署Node-js的环境"><a href="#五、部署Node-js的环境" class="headerlink" title="五、部署Node.js的环境"></a>五、部署Node.js的环境</h3><p>Node.js官方：<a href="http://nodejs.org" target="_blank" rel="external">http://nodejs.org</a><br>各种操作系统安装步骤:<a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="external">http://www.runoob.com/nodejs/nodejs-install-setup.html</a><br><code>注意:想要在任何地方运行一定要配置环境变量</code></p>
 
       
 
@@ -201,11 +203,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">error</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Node.js安装</a>
         		</li>
       		
 		</ul>
@@ -217,7 +219,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/MysqlError/" class="article-tag-list-link color1">MysqlError</a>
+        			<a href="/categories/Node.js/" class="article-tag-list-link color3">Node.js</a>
         		</li>
       		
 		</ul>
@@ -226,7 +228,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/26/Cant-connect-to-MYSQL-server-on-localhost-10038/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/06/04/Node.js概述及安装/">展开全文 >></a>
         </p>
       
 
@@ -241,34 +243,27 @@
 
 
   
-    <article id="post-windows下用cmd命令新建用户" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-http概念进阶" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/24/windows下用cmd命令新建用户/">windows下用cmd命令新建用户</a>
+      <a class="article-title" href="/2017/06/04/http概念进阶/">http概念进阶</a>
     </h1>
   
 
         
-        <a href="/2017/05/24/windows下用cmd命令新建用户/" class="archive-article-date">
-  	<time datetime="2017-05-24T13:35:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-24</time>
+        <a href="/2017/06/04/http概念进阶/" class="archive-article-date">
+  	<time datetime="2017-06-04T10:44:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="一、打-开DOS操作窗口，点击“开始”菜单，选择“命令提示符”"><a href="#一、打-开DOS操作窗口，点击“开始”菜单，选择“命令提示符”" class="headerlink" title="一、打 开DOS操作窗口，点击“开始”菜单，选择“命令提示符”"></a>一、打 开DOS操作窗口，点击“开始”菜单，选择“命令提示符”</h3><p><code>快捷键</code>: windows+r 然后输入cmd</p>
-<h3 id="二、添加账号net-user-test-test123-add"><a href="#二、添加账号net-user-test-test123-add" class="headerlink" title="二、添加账号net user test test123 /add"></a>二、添加账号net user test test123 /add</h3><p><img src="/imgs/useradd.png"></p>
-<h3 id="三、添加管理员权限net-localgroup-Administrators-test-add"><a href="#三、添加管理员权限net-localgroup-Administrators-test-add" class="headerlink" title="三、添加管理员权限net localgroup Administrators test /add"></a>三、添加管理员权限net localgroup Administrators test /add</h3><p><img src="/imgs/poweradd.png"></p>
-<h3 id="四、查看用户权限net-localgroup-administrators或者net-user-test"><a href="#四、查看用户权限net-localgroup-administrators或者net-user-test" class="headerlink" title="四、查看用户权限net localgroup administrators或者net user test"></a>四、查看用户权限net localgroup administrators或者net user test</h3><p><img src="/imgs/powerStatus1.png"><br>或者<br><img src="/imgs/powerStatus2.png"></p>
-<h3 id="五、删除权限net-localgroup-administrators-test-del"><a href="#五、删除权限net-localgroup-administrators-test-del" class="headerlink" title="五、删除权限net localgroup administrators test /del"></a>五、删除权限net localgroup administrators test /del</h3><p><img src="/imgs/powerdel.png"></p>
-<h3 id="六、删除账号net-user-test-del"><a href="#六、删除账号net-user-test-del" class="headerlink" title="六、删除账号net user test /del"></a>六、删除账号net user test /del</h3><p><img src="/imgs/userdel.png"></p>
-<h3 id="七、查看账号net-users"><a href="#七、查看账号net-users" class="headerlink" title="七、查看账号net users"></a>七、查看账号net users</h3><p><img src="/imgs/userStatus.png"></p>
-
+        <h3 id="什么是回调？"><a href="#什么是回调？" class="headerlink" title="什么是回调？"></a>什么是回调？</h3><h3 id="什么是异步-同步？"><a href="#什么是异步-同步？" class="headerlink" title="什么是异步/同步？"></a>什么是异步/同步？</h3><h3 id="什么是I-O？"><a href="#什么是I-O？" class="headerlink" title="什么是I/O？"></a>什么是I/O？</h3><h3 id="什么是单线程-多线程"><a href="#什么是单线程-多线程" class="headerlink" title="什么是单线程/多线程"></a>什么是单线程/多线程</h3><h3 id="什么是阻塞-非阻塞"><a href="#什么是阻塞-非阻塞" class="headerlink" title="什么是阻塞/非阻塞"></a>什么是阻塞/非阻塞</h3><h3 id="什么是事件？"><a href="#什么是事件？" class="headerlink" title="什么是事件？"></a>什么是事件？</h3><h3 id="什么是事件驱动？"><a href="#什么是事件驱动？" class="headerlink" title="什么是事件驱动？"></a>什么是事件驱动？</h3><h3 id="什么是基于事件驱动归档回调？"><a href="#什么是基于事件驱动归档回调？" class="headerlink" title="什么是基于事件驱动归档回调？"></a>什么是基于事件驱动归档回调？</h3><h3 id="什么事事件循环？"><a href="#什么事事件循环？" class="headerlink" title="什么事事件循环？"></a>什么事事件循环？</h3>
       
 
       
@@ -281,83 +276,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">windowsCmd</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/WindowsCmd/" class="article-tag-list-link color1">WindowsCmd</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/24/windows下用cmd命令新建用户/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-hexo-generate-执行时报-offset-错误" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/24/hexo-generate-执行时报-offset-错误/">hexo generate 执行时报 offset 错误</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/24/hexo-generate-执行时报-offset-错误/" class="archive-article-date">
-  	<time datetime="2017-05-23T18:05:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="一、hexo-g-出错"><a href="#一、hexo-g-出错" class="headerlink" title="一、hexo g 出错"></a>一、hexo g 出错</h4><p>截图： <img src="/imgs/timezone.png"><br>原因：我在_confing.yml下 timezone配置错了  </p>
-<p>错误配置： timezone： ChongQing</p>
-<p>如果设置cheng +08:00 后 momentjs解析会报异常<br>需要将timezone配置成 时区名称：<br><img src="/imgs/timezone1.png"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">error</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Http知识</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Http概念进阶</a>
         		</li>
       		
 		</ul>
@@ -369,7 +292,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo报错/" class="article-tag-list-link color2">Hexo报错</a>
+        			<a href="/categories/Http知识/" class="article-tag-list-link color2">Http知识</a>
         		</li>
       		
 		</ul>
@@ -378,7 +301,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/24/hexo-generate-执行时报-offset-错误/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/06/04/http概念进阶/">展开全文 >></a>
         </p>
       
 
@@ -393,28 +316,64 @@
 
 
   
-    <article id="post-learn-markdown" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-http知识之状态码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/24/learn-markdown/">learn markdown</a>
+      <a class="article-title" href="/2017/06/04/http知识之状态码/">http知识之状态码</a>
     </h1>
   
 
         
-        <a href="/2017/05/24/learn-markdown/" class="archive-article-date">
-  	<time datetime="2017-05-23T17:26:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-24</time>
+        <a href="/2017/06/04/http知识之状态码/" class="archive-article-date">
+  	<time datetime="2017-06-04T09:52:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="一、markdown学习分享"><a href="#一、markdown学习分享" class="headerlink" title="一、markdown学习分享"></a>一、markdown学习分享</h3><p> <code>link</code> <a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">markdown语法学习大全</a></p>
-<h3 id="二、markdown推荐编辑器"><a href="#二、markdown推荐编辑器" class="headerlink" title="二、markdown推荐编辑器"></a>二、markdown推荐编辑器</h3><p>小书匠、未知笔记、cmd markdown</p>
+        <h3 id="一、Http状态码"><a href="#一、Http状态码" class="headerlink" title="一、Http状态码"></a>一、Http状态码</h3><table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>对应的信息</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1xx</td>
+<td>表示请求已经接受，继续处理</td>
+</tr>
+<tr>
+<td>2xx</td>
+<td>表示成功处理</td>
+</tr>
+<tr>
+<td>3xx</td>
+<td>表示重定向</td>
+</tr>
+<tr>
+<td>4xx</td>
+<td>客服端错误，语法错误</td>
+</tr>
+<tr>
+<td>5xx</td>
+<td>服务器端错误</td>
+</tr>
+</tbody>
+</table>
+<h3 id="二、常出现的状态码"><a href="#二、常出现的状态码" class="headerlink" title="二、常出现的状态码"></a>二、常出现的状态码</h3><h4 id="1-200"><a href="#1-200" class="headerlink" title="1.200"></a>1.200</h4><p>接受处理成功</p>
+<h4 id="2-304"><a href="#2-304" class="headerlink" title="2.304"></a>2.304</h4><p>资源重定向(解决方案:清楚缓存)</p>
+<h4 id="3-400"><a href="#3-400" class="headerlink" title="3.400"></a>3.400</h4><p>客户端请求语法错误</p>
+<h4 id="4-401"><a href="#4-401" class="headerlink" title="4.401"></a>4.401</h4><p>请求没有经过授权</p>
+<h4 id="5-403"><a href="#5-403" class="headerlink" title="5.403"></a>5.403</h4><p>服务器端收到请求，但是拒绝了（可能是没有权限）</p>
+<h4 id="6-404"><a href="#6-404" class="headerlink" title="6.404"></a>6.404</h4><p>没找到，对象不存在(或者输错地址url)</p>
+<h4 id="7-500"><a href="#7-500" class="headerlink" title="7.500"></a>7.500</h4><p>服务器端发生了一个不可预期的错误</p>
+<h4 id="8-503"><a href="#8-503" class="headerlink" title="8.503"></a>8.503</h4><p>服务器端当前还不能处理这个请求，过段时间才能恢复正常</p>
 
       
 
@@ -428,82 +387,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Markdown/" class="article-tag-list-link color4">Markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/24/learn-markdown/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-hexo-建站分享" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/16/hexo-建站分享/">hexo 建站分享</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/16/hexo-建站分享/" class="archive-article-date">
-  	<time datetime="2017-05-16T08:50:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="一-建站连接分享"><a href="#一-建站连接分享" class="headerlink" title="一.建站连接分享"></a>一.建站连接分享</h4><p><code>link</code> <a href="https://segmentfault.com/a/1190000004947261" target="_blank" rel="external">手把手教学Hexo+Githup pages搭建个人博客</a><br><code>link</code> <a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external"> markdown半小时入门分享</a></p>
-<h4 id="二-建站遇到的问题"><a href="#二-建站遇到的问题" class="headerlink" title="二.建站遇到的问题"></a>二.建站遇到的问题</h4><p>当hexo d -g出错，找不到git时，看我之前的一篇<a href="https://ctbumyq.github.io/2017/05/16/hexo-d-%E5%87%BA%E9%94%99/">hexo -d错误解决</a>。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Http知识</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">静态建站</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">状态码</a>
         		</li>
       		
 		</ul>
@@ -515,7 +403,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo/" class="article-tag-list-link color5">Hexo</a>
+        			<a href="/categories/Http知识/" class="article-tag-list-link color2">Http知识</a>
         		</li>
       		
 		</ul>
@@ -524,7 +412,174 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/16/hexo-建站分享/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/06/04/http知识之状态码/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-送给我的学弟学妹们" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/01/送给我的学弟学妹们/">送给我的学弟学妹们</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/01/送给我的学弟学妹们/" class="archive-article-date">
+  	<time datetime="2017-06-01T15:34:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="不忘初心-方得始终"><a href="#不忘初心-方得始终" class="headerlink" title="不忘初心 方得始终"></a>不忘初心 方得始终</h1><h4 id="欢迎各位高中的小伙伴们来到我的博客"><a href="#欢迎各位高中的小伙伴们来到我的博客" class="headerlink" title="欢迎各位高中的小伙伴们来到我的博客"></a>欢迎各位高中的小伙伴们来到我的博客</h4><hr>
+<p>这次我会为大家分享一下我的高中以及大学的个人经历，以及高考前的状态，高考的正确姿态，调整心态，如何选择，如何改变自我等。<br>高考前应该做的事：</p>
+<blockquote>
+<ul>
+<li>控制  –控制自己波动的情绪，切忌悲喜频繁切换，一颗平常心决定了你发挥的状态</li>
+<li>学习 –看大纲学习，舍弃该放弃的，得到必须得到的，切忌专研，长时间停留，把思维固定及其危险</li>
+<li>不得放松  –一但放松，你可能就收不回来了，高考前的端午很不好，一定要收心，收心，收心</li>
+</ul>
+</blockquote>
+<p>高考一定要<code>放弃一切全力高考</code>，分数决定选择的起点，放弃恋爱吧，放弃对未来的幻想，放弃家里对自己的期望，放空思维，这一刻，我只为自己高考。</p>
+<p>高考的时候我在。。’’撩妹’’，你敢信,结果撩到了工商大学这个坑，师资力量一度让我绝望。</p>
+<p>其实每天早上喊喊口号也不错的：我是某某，我要考某某大学，某某专业，我为自己而考。也许并不整齐的声音或多不便，但让自己安静前行的力量一点点的累积。</p>
+<p>大战在即，勇士磨枪，剑拔弩张。塞北风尘，旷野苍苍，战火熊熊。最不惧少年郎，看我豪情万丈。披袍马上，纵西风烈烈，战马嘶嚎，定旗开得胜。看我河山大好，前程锦绣，气吞万里。不负我尝胆卧薪，三千岁月苦与甜。亲人遥寄，望前程大好，金榜题名。</p>
+<p>高考真的很简单，比平时模拟题简单，高考考的就是心态，你能不能抗住高考的压力，仔仔细细的把该做的做完。扛住了，你比那些平时比你好的人考的更好，你能比他上更好的大学，得到更好的平台，扛不住就只能大家一起非正常发挥。</p>
+<p>请不要在现在这个时刻期待大学，我允许你心里默念：某某大学，我来了。(ps：百度在计算机专业只要985,211)</p>
+<p>不管我们何时何地和什么人在一起，我们都应该知到”Who i am”，这是个哲学问题。当有人问我时，我这样回答：我是一个学生，我的必须做的事情是努力学习，这不仅仅是父母的期望，不是为了谁谁学习，学到的才是自己的，我是父母的儿子，我有义务经常问候，关心他们。我是一个即将面临找工作的大三学生，我必须找到一份能让我在重庆活得不错的工资。我是她的的男朋友，我必须照顾好她。我就是我，不断在超越自我的我。找清自己的位置，自己是谁，该做什么，目标是什么。</p>
+<p>寒窗苦读，肩负改变命运之使命，你们是最棒的。我仅代表高2014级11班（光棍班）全体学生送来最真挚的问候，我们在重庆，四川，武汉，广东，天津为你们默默加油。</p>
+<p>下面这些高考之后再看吧：<br>学习不分先后，达者为师。（骗人的，会得罪人的）<br>下面的话权当学长个人三年感悟：根据“前景、市场、兴趣“选择专业，一定要按顺序，当然可以不听我的，全评个人情况而定。根据专业选择学校，对学校排名。根据分数去找到能进且最好的学校。当然，这只是我的提议。兴趣也很重要，为什么我排在最后，当你没钱吃饭喊妈妈的时候就知道了。</p>
+<p>本人大学大一时，深陷高考失利的痛苦，经常做梦回去复读，想想真的挺怕的。自甘堕落，沉沦自我，大二时：依然没有重拾自我，没有目标，只是开始好好学习。大二末：认识女朋友侯兰，定下目标，重拾自我，拼命学习，拼命补充前两年的空缺。大三上：我已经没有了时间再去细想喜欢什么，学习，成长，学习，成长。。。当你失意的时候，真的需要一个人，一个人拉你一把，走出深渊。大三下：不仅仅是学习，做项目，各种比赛，挤时间学车，兼职，谈恋爱，我俨然忙成狗，而不满学习实习的我，又在忙于找实习，我已经没有时间喘气了，我不会停滞我前进的脚步，改变世界，从“Hello World（世界第一个程序）”开始。</p>
+<p>在这花花世界里，迷失自我是一件非常可怕的事情，不要迷恋游戏，不要在迷恋某一项自己都认为是错的事情，回想起来真的很贱。大千世界，无奇不有，坚守本心，我在重庆工商大学，等着你们的好消息。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">选择大学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">经验</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/经验分享/" class="article-tag-list-link color5">经验分享</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/01/送给我的学弟学妹们/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-初试之二面" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/01/初试之二面/">初试之二面</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/01/初试之二面/" class="archive-article-date">
+  	<time datetime="2017-06-01T15:09:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>对于今天的二面心路历程：期待–忐忑–兴奋–懵逼–无聊–再见。<br>总之：今天才发现面的公司是之前来我们学校招人的外包公司，不能说是差，是学到东西，薪资待遇也不理想，所以决定明天不去继续面了，虽然浪费了我很多时间，但还是巩固了一下之前自学的东西。<br>还是有那么点收获的吧。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/经历/" class="article-tag-list-link color3">经历</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/01/初试之二面/">展开全文 >></a>
         </p>
       
 
@@ -541,7 +596,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -656,6 +711,14 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Node.js小爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">月总结</a>
               </li>
              
@@ -664,11 +727,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">error</a>
+                <a href="javascript:void(0)" class="js-tag color5">Node.js安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -676,7 +735,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">静态建站</a>
+                <a href="javascript:void(0)" class="js-tag color1">error</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -688,15 +751,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Node.js入门编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">静态建站</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">状态码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
