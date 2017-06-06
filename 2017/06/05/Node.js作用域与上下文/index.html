@@ -8,16 +8,17 @@
   <link rel="dns-prefetch" href="https://ctbumyq.github.io">
   <title>Node.js作用域与上下文 | 牟一全的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="做自己爱做的事，爱自己再做的事">
+  <meta name="description" content="Node.js潜入理解作用域与上下文">
+<meta name="keywords" content="作用域，上下文">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js作用域与上下文">
 <meta property="og:url" content="https://ctbumyq.github.io/2017/06/05/Node.js作用域与上下文/index.html">
 <meta property="og:site_name" content="牟一全的博客">
-<meta property="og:description" content="做自己爱做的事，爱自己再做的事">
-<meta property="og:updated_time" content="2017-06-05T05:58:29.926Z">
+<meta property="og:description" content="Node.js潜入理解作用域与上下文">
+<meta property="og:updated_time" content="2017-06-06T15:46:26.987Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js作用域与上下文">
-<meta name="twitter:description" content="做自己爱做的事，爱自己再做的事">
+<meta name="twitter:description" content="Node.js潜入理解作用域与上下文">
   
     <link rel="alternative" href="/atom.xml" title="牟一全的博客" type="application/atom+xml">
   
@@ -183,7 +184,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="一、作用域"><a href="#一、作用域" class="headerlink" title="一、作用域"></a>一、作用域</h3><p>我理解我变量或者函数的作用范围<br>&emsp;<code>作用域:</code>一个变量可以被定义在局部或者全局作用域中，这建立了在运行时（runtime）期间变量的访问性的不同作用域范围。 任何被定义的全局变量，意味着它需要在函数体的外部被声明，并且存活于整个运行时（runtime），并且在任何作用域中都可以被访问到。 在ES6之前，局部变量只能存在于函数体中，并且函数的每次调用它们都<br><a id="more"></a><br>拥有不同的作用域范围。 局部变量只能在其被调用期的作用域范围内被赋值、检索、操纵。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line"><span class="keyword">var</span> tmp = <span class="number">123</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(tmp); <span class="comment">// 123</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>之所以能够访问，是因为var关键字声明的变量有一个变量提升的过程。而在ES6场景，推荐使用let关键字定义变量：<br> 从ES6开始，你可以通过let关键字来定义变量，它修正了var关键字的缺点，能够让你像Java语言那样定义变量，并且支持块级作用域<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> <span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line"><span class="keyword">let</span> tmp = <span class="number">123</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(tmp); <span class="comment">// ReferenceError: tmp is not defined</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p> 这种方式，能够避免很多错误。</p>
+<h3 id="二、上下文"><a href="#二、上下文" class="headerlink" title="二、上下文"></a>二、上下文</h3><p>我理解我this关键字的指向<br>&emsp;上下文通常取决于函数是如何被调用的。当一个函数被作为对象中的一个方法被调用的时候，this被设置为调用该方法的对象上：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">foo: <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">alert(<span class="keyword">this</span> === obj); </div><div class="line">&#125;</div><div class="line">&#125;;</div><div class="line">obj.foo(); <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>&emsp;这个准则也适用于当调用函数时使用new操作符来创建对象的实例的情况下。在这种情况下，在函数的作用域内部this的值被设置为新创建的实例：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">()</span></span>&#123;</div><div class="line">alert(<span class="keyword">this</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">new</span> foo() <span class="comment">// foo</span></div><div class="line">foo() <span class="comment">// window</span></div></pre></td></tr></table></figure></p>
+<p>当调用一个为绑定函数时，this默认情况下是全局上下文，在浏览器中它指向window对象。需要注意的是，ES5引入了严格模式的概念， 如果启用了严格模式，此时上下文默认为undefined。</p>
+<h3 id="三、作用域链"><a href="#三、作用域链" class="headerlink" title="三、作用域链"></a>三、作用域链</h3><p>&emsp;当代码在一个环境中执行时，会创建变量对象的一个作用域链（scope chain）。作用域链的用途是保证对执行环境有权访问的所有变量和函数的有序访问。 作用域链包含了在环境栈中的每个执行环境对应的变量对象。通过作用域链，可以决定变量的访问和标识符的解析。 注意，全局执行环境的变量对象始终都是作用域链的最后一个对象。我们来看一个例子：<br><figure class="highlight qml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> <span class="built_in">color</span> = <span class="string">"blue"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeColor</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="built_in">var</span> anotherColor = <span class="string">"red"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">swapColors</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="built_in">var</span> tempColor = anotherColor;</div><div class="line">anotherColor = <span class="built_in">color</span>;</div><div class="line"><span class="built_in">color</span> = tempColor;</div><div class="line"><span class="comment">// 这里可以访问color, anotherColor, 和 tempColor</span></div><div class="line">&#125;</div><div class="line"><span class="comment">// 这里可以访问color 和 anotherColor，但是不能访问 tempColor</span></div><div class="line">swapColors();</div><div class="line">&#125;</div><div class="line">changeColor();</div><div class="line"><span class="comment">// 这里只能访问color</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">"Color is now "</span> + <span class="built_in">color</span>);</div></pre></td></tr></table></figure></p>
+<h3 id="四、闭包"><a href="#四、闭包" class="headerlink" title="四、闭包"></a>四、闭包</h3><p>&emsp;闭包是指有权访问另一函数作用域中的变量的函数。换句话说，在函数内定义一个嵌套的函数时，就构成了一个闭包， 它允许嵌套函数访问外层函数的变量。通过返回嵌套函数，允许你维护对外部函数中局部变量、参数、和内函数声明的访问。 这种封装允许你在外部作用域中隐藏和保护执行环境，并且暴露公共接口，进而通过公共接口执行进一步的操作。可以看个简单的例子：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="keyword">var</span> localVariable = <span class="string">'private variable'</span>;</div><div class="line"><span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">bar</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="keyword">return</span> localVariable;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> getLocalVariable = foo();</div><div class="line">getLocalVariable() <span class="comment">// private variable</span></div></pre></td></tr></table></figure></p>
+<p>模块模式最流行的闭包类型之一，它允许你模拟公共的、私有的、和特权成员：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Module = (<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="keyword">var</span> privateProperty = <span class="string">'foo'</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">privateMethod</span><span class="params">(args)</span></span>&#123;</div><div class="line"><span class="comment">// do something</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> &#123;</div><div class="line">publicProperty: <span class="string">''</span>,</div><div class="line">publicMethod: <span class="function"><span class="keyword">function</span><span class="params">(args)</span></span>&#123;</div><div class="line"><span class="comment">// do something</span></div><div class="line">&#125;,</div><div class="line">privilegedMethod: <span class="function"><span class="keyword">function</span><span class="params">(args)</span></span>&#123;</div><div class="line"><span class="keyword">return</span> privateMethod(args);</div><div class="line">&#125;</div><div class="line">&#125;;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
+
       
 
       
@@ -222,7 +232,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Js作用域</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Js上下文</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Js作用域与上下文/" class="article-tag-list-link color5">Js作用域与上下文</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -535,6 +571,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">经验</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Js作用域</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Js上下文</a>
               </li>
             
             <div class="clearfix"></div>
