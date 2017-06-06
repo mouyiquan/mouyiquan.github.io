@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://ctbumyq.github.io">
   <title>Node.js概念进阶 | 牟一全的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、什么是回调？百科：回调函数回调函数就是一个通过函数指针调用的函数。如果你把函数的指针（地址）作为参数传递给另一个函数，当这个指针被用为调用它所指向的函数时，我们就说这是回调函数。回调函数不是由该函数的实现方直接调用，而是在特定的事件或条件发生时由另外的一方调用的，用于对该事件或条件进行响应。">
+  <meta name="description" content="一、什么是回调？百科：回调函数回调函数就是一个通过函数指针调用的函数。如果你把函数的指针（地址）作">
 <meta name="keywords" content="Node.js概念进阶，Node.js知识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js概念进阶">
 <meta property="og:url" content="https://ctbumyq.github.io/2017/06/04/Node.js概念进阶/index.html">
 <meta property="og:site_name" content="牟一全的博客">
-<meta property="og:description" content="一、什么是回调？百科：回调函数回调函数就是一个通过函数指针调用的函数。如果你把函数的指针（地址）作为参数传递给另一个函数，当这个指针被用为调用它所指向的函数时，我们就说这是回调函数。回调函数不是由该函数的实现方直接调用，而是在特定的事件或条件发生时由另外的一方调用的，用于对该事件或条件进行响应。">
-<meta property="og:updated_time" content="2017-06-06T06:52:56.953Z">
+<meta property="og:description" content="一、什么是回调？百科：回调函数回调函数就是一个通过函数指针调用的函数。如果你把函数的指针（地址）作">
+<meta property="og:updated_time" content="2017-06-06T09:26:33.037Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js概念进阶">
-<meta name="twitter:description" content="一、什么是回调？百科：回调函数回调函数就是一个通过函数指针调用的函数。如果你把函数的指针（地址）作为参数传递给另一个函数，当这个指针被用为调用它所指向的函数时，我们就说这是回调函数。回调函数不是由该函数的实现方直接调用，而是在特定的事件或条件发生时由另外的一方调用的，用于对该事件或条件进行响应。">
+<meta name="twitter:description" content="一、什么是回调？百科：回调函数回调函数就是一个通过函数指针调用的函数。如果你把函数的指针（地址）作">
   
     <link rel="alternative" href="/atom.xml" title="牟一全的博客" type="application/atom+xml">
   
@@ -184,15 +184,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="一、什么是回调？"><a href="#一、什么是回调？" class="headerlink" title="一、什么是回调？"></a>一、什么是回调？</h3><p><code>百科：回调函数</code><br>回调函数就是一个通过函数指针调用的函数。如果你把函数的指针（地址）作为参数传递给另一个函数，当这个指针被用为调用它所指向的函数时，我们就说这是回调函数。回调函数不是由该函数的实现方直接调用，而是在特定的事件或条件发生时由另外的一方调用的，用于对该事件或条件进行响应。<br><a id="more"></a><br><code>使用场景:</code></p>
-<p>1.实现setTimeout、setInterval的函数调用得到其返回值<br>2.资源加载：动态加载js文件后执行回调，加载iframe后执行回调，ajax操作回调，图片加载完成执行回调，AJAX等等。<br>3.DOM事件及Node.js事件基于回调机制(Node.js回调可能会出现多层回调嵌套的问题)。<br><code>回调函数的传递</code><br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$.<span class="keyword">get</span>(<span class="string">'myhtmlpage.html'</span>, myCallBack);<span class="comment">//这是对的</span></div><div class="line">$.<span class="keyword">get</span>(<span class="string">'myhtmlpage.html'</span>, myCallBack(<span class="string">'foo'</span>, <span class="string">'bar'</span>));<span class="comment">//这是错的，那么要带参数呢？</span></div><div class="line">$.<span class="keyword">get</span>(<span class="string">'myhtmlpage.html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//带参数的使用函数表达式</span></div><div class="line">myCallBack(<span class="string">'foo'</span>, <span class="string">'bar'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p><code>基本方法:</code></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">"javascript"</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="actionscript"></span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span><span class="params">(callback)</span> </span>&#123;</div><div class="line"><span class="comment">// … </span></div><div class="line"><span class="comment">// Call the callback</span></div><div class="line">callback(<span class="string">'stuff'</span>, <span class="string">'goes'</span>, <span class="string">'here'</span>);</div><div class="line">&#125; </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">(a, b, c)</span> </span>&#123;</div><div class="line"><span class="comment">// I'm the callback</span></div><div class="line">alert(a + <span class="string">" "</span> + b + <span class="string">" "</span> + c);</div><div class="line">&#125; </div><div class="line">doSomething(foo); </div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><code>用匿名函数的形式</code><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">"javascript"</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="actionscript"></span></div><div class="line"> <span class="function"><span class="keyword">function</span> <span class="title">dosomething</span><span class="params">(damsg, callback)</span></span>&#123;</div><div class="line">  alert(damsg);</div><div class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> callback == <span class="string">"function"</span>) </div><div class="line">  callback();</div><div class="line"> &#125; </div><div class="line">dosomething(<span class="string">"回调函数"</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">  alert(<span class="string">"和 jQuery 的 callbacks 形式一样!"</span>);</div><div class="line"> &#125;); </div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><code>使用javascript的call方法</code><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">"javascript"</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="actionscript"></span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Thing</span><span class="params">(name)</span> </span>&#123;</div><div class="line"><span class="keyword">this</span>.name = name;</div><div class="line">&#125;</div><div class="line">Thing.prototype.doSomething = <span class="function"><span class="keyword">function</span><span class="params">(callback)</span> </span>&#123;</div><div class="line"><span class="comment">// Call our callback, but using our own instance as the context</span></div><div class="line">callback.call(<span class="keyword">this</span>);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">()</span> </span>&#123;</div><div class="line">alert(<span class="keyword">this</span>.name);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="keyword">var</span> t = <span class="keyword">new</span> Thing(<span class="string">'Joe'</span>);</div><div class="line">t.doSomething(foo); <span class="comment">// Alerts "Joe" via `foo`</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h3 id="二、什么是异步-同步？"><a href="#二、什么是异步-同步？" class="headerlink" title="二、什么是异步/同步？"></a>二、什么是异步/同步？</h3><p><code>异步:</code></p>
-<p><code>同步:</code></p>
-<h3 id="三、什么是I-O？"><a href="#三、什么是I-O？" class="headerlink" title="三、什么是I/O？"></a>三、什么是I/O？</h3><h3 id="四、什么是单线程-多线程"><a href="#四、什么是单线程-多线程" class="headerlink" title="四、什么是单线程/多线程"></a>四、什么是单线程/多线程</h3><h3 id="五、什么是阻塞-非阻塞"><a href="#五、什么是阻塞-非阻塞" class="headerlink" title="五、什么是阻塞/非阻塞"></a>五、什么是阻塞/非阻塞</h3><h3 id="六、什么是事件？"><a href="#六、什么是事件？" class="headerlink" title="六、什么是事件？"></a>六、什么是事件？</h3><h3 id="七、什么是事件驱动？"><a href="#七、什么是事件驱动？" class="headerlink" title="七、什么是事件驱动？"></a>七、什么是事件驱动？</h3><h3 id="八、什么是基于事件驱动归档回调？"><a href="#八、什么是基于事件驱动归档回调？" class="headerlink" title="八、什么是基于事件驱动归档回调？"></a>八、什么是基于事件驱动归档回调？</h3><h3 id="九、什么事事件循环？"><a href="#九、什么事事件循环？" class="headerlink" title="九、什么事事件循环？"></a>九、什么事事件循环？</h3>
+        <h3 id="一、什么是回调？"><a href="#一、什么是回调？" class="headerlink" title="一、什么是回调？"></a>一、什么是回调？</h3><p><code>百科：回调函数</code><br>回调函数就是一个通过函数指针调用的函数。如果你把函数的指针（地址）作<br><a id="more"></a><br>为参数传递给另一个函数，当这个指针被用为调用它所指向的函数时，我们就说这是回调函数。回调函数不是由该函数的实现方直接调用，而是在特定的事件或条件发生时由另外的一方调用的，用于对该事件或条件进行响应。<br><code>使用场景:</code></p>
+<p>1.实现setTimeout、setInterval的函数调用得到其返回值<br>2.资源加载：动态加载js文件后执行回调，加载iframe后执行回调，ajax操作回调，图片加载完成执行回调，AJAX等等。<br>3.DOM事件及Node.js事件基于回调机制(Node.js回调可能会出现多层回调嵌套的问题)。</p>
+<h3 id="二、什么是异步-同步？"><a href="#二、什么是异步-同步？" class="headerlink" title="二、什么是异步/同步？"></a>二、什么是异步/同步？</h3><p><code>异步:</code><br>最常见的是注册页面的用户名异步请求，不需要提交表单，直接返回你输入的用户名是否已经存在。异步简单的说就是无须等待处理的结果，一直走下去，当你的结果返回来之后再去执行它。<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">         <span class="keyword">type</span>:<span class="string">"get"</span>,</div><div class="line">        </div><div class="line">         url:<span class="string">"reg.php"</span>,</div><div class="line">         <span class="keyword">async</span>:<span class="literal">true</span>,</div><div class="line">         data:&#123;</div><div class="line"></div><div class="line">           user:$(<span class="string">'#data input'</span>)[<span class="number">0</span>].value,</div><div class="line">           pwd:$(<span class="string">'#data input'</span>)[<span class="number">1</span>].value,</div><div class="line">           tel:$(<span class="string">'#data input'</span>)[<span class="number">3</span>].value,</div><div class="line">           email:$(<span class="string">'#data input'</span>)[<span class="number">4</span>].value</div><div class="line">         &#125;,</div><div class="line">         success : <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">           <span class="built_in">console</span>.log(data);</div><div class="line">         &#125;</div><div class="line">       &#125;);</div></pre></td></tr></table></figure></p>
+<p><code>同步:</code><br>一步一步的走，当出现i/o操作时，等待，有了结束之后再继续走下去</p>
+<h3 id="三、什么是I-O？"><a href="#三、什么是I-O？" class="headerlink" title="三、什么是I/O？"></a>三、什么是I/O？</h3><p>&emsp;Node.js最大的特性是采用异步式I/O与事件驱动的架构设计。对于高并发的解决方案，传动的架构是多线程模型，也就是为每个业务逻辑提供一个系统线程，通过系统线程切换来弥补同步式I/O调用时的时间开销。Node.js使用的单线程模型，在执行的过程中会维护一个事件队列，程序在执行时在进入时间循环等待下一个事件的到来。</p>
+<h3 id="四、什么是阻塞-非阻塞"><a href="#四、什么是阻塞-非阻塞" class="headerlink" title="四、什么是阻塞/非阻塞"></a>四、什么是阻塞/非阻塞</h3><p><code>简单点说:</code><br>&emsp;阻塞就是干不完不准回来，<br>&emsp;非阻塞就是你先干，我现看看有其他事没有，完了告诉我一声<br><code>阻塞</code><br>&emsp;阻塞调用是指调用结果返回之前，当前线程会被挂起。函数只有在得到结果之后才会返回。有人也许会把阻塞调用和同步调用等同起来，实际上它们是不同的。对于同步调用来说，很多时候当前线程还是激活的，只是从逻辑上当前函数没有返回而已。例如，我们在CSocket中调用Receive函数，如果缓冲区中没有数据，这个函数就会一直等待，直到有数据才返回。而此时，当前线程还会继续处理各种各样的消息。如果主窗口和调用函数在同一个线程中，除非你在特殊的界面操作函数中调用，其实主界面还是应该可以刷新。socket接收数据的另外一个函数recv则是一个阻塞调用的例子。当socket工作在阻塞模式的时候， 如果没有数据的情况下调用该函数，则当前线程就会被挂起，直到有数据为止。<br><code>非阻塞</code><br>&emsp;非阻塞和阻塞的概念相对应，指在不能立刻得到结果之前，该函数不会阻塞当前线程，而会立刻返回。</p>
+<h3 id="五、什么是事件？"><a href="#五、什么是事件？" class="headerlink" title="五、什么是事件？"></a>五、什么是事件？</h3><p>&emsp;JavaScript 使我们有能力创建动态页面。事件是可以被 JavaScript 侦测到的行为。网页中的每个元素都可以产生某些可以触发JavaScript 函数的事件。某一个动作可以触发一个事件，例如给onclick一个事件，当点击时，就会产生一个点击事件</p>
+<h3 id="六、什么是事件驱动？"><a href="#六、什么是事件驱动？" class="headerlink" title="六、什么是事件驱动？"></a>六、什么是事件驱动？</h3><p>&emsp; js是采用事件驱动(event-driven)响应用户操作的。比如通过鼠标或者按键在浏览器窗口或者网页元素(按钮，文本框…)上执行的操作，我们称之为事件(Event)。由鼠标或热键引发的一连串程序的动作，称之为事件驱动(Event-Driver)。对事件进行处理程序或函数，我们称之为事件处理程序(Event Handler)。<br><code>link</code> <a href="http://www.cnblogs.com/yerenyuan/p/5393795.html" target="_blank" rel="external">http://www.cnblogs.com/yerenyuan/p/5393795.html</a></p>
+<h3 id="七、什么是基于事件驱动归档回调？"><a href="#七、什么是基于事件驱动归档回调？" class="headerlink" title="七、什么是基于事件驱动归档回调？"></a>七、什么是基于事件驱动归档回调？</h3><p><code>link</code> <a href="http://www.yiibai.com/nodejs/nodejs_event_callback.html" target="_blank" rel="external">http://www.yiibai.com/nodejs/nodejs_event_callback.html</a></p>
+<h3 id="八、什么是事件循环？"><a href="#八、什么是事件循环？" class="headerlink" title="八、什么是事件循环？"></a>八、什么是事件循环？</h3><p>&emsp;主线程从”任务队列”中读取事件，这个过程是循环不断的，所以整个的这种运行机制又称为Event Loop（事件循环）。<br><code>link</code> <a href="http://www.jb51.net/article/56022.htm" target="_blank" rel="external">http://www.jb51.net/article/56022.htm</a></p>
+
       
 
       
@@ -461,7 +463,27 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">月总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">经验之谈</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">error</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Node.js入门编程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -473,6 +495,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Node.js知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Node.js概念进阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Node.js安装</a>
               </li>
              
@@ -481,23 +511,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">error</a>
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Node.js入门编程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Node.js知识</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Node.js概念进阶</a>
+                <a href="javascript:void(0)" class="js-tag color5">静态建站</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -509,11 +527,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">静态建站</a>
+                <a href="javascript:void(0)" class="js-tag color2">Http知识</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+                <a href="javascript:void(0)" class="js-tag color4">状态码</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -525,27 +543,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Http知识</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">状态码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">月总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">经验之谈</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">单线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">多线程</a>
+                <a href="javascript:void(0)" class="js-tag color1">windowsCmd</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -557,7 +559,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" class="js-tag color4">单线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">多线程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -566,10 +572,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">经验</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">windowsCmd</a>
               </li>
             
             <div class="clearfix"></div>
