@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://ctbumyq.github.io">
   <title>Node.js小爬虫 | 牟一全的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、视频地址慕课网 http://www.imooc.com/video/7965 二、直接上源码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980">
+  <meta name="description" content="一、视频地址慕课网 http://www.imooc.com/video/7965 二、直接上源码">
 <meta name="keywords" content="Node.js，Node.js小爬虫">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js小爬虫">
 <meta property="og:url" content="https://ctbumyq.github.io/2017/06/05/Node.js小爬虫/index.html">
 <meta property="og:site_name" content="牟一全的博客">
-<meta property="og:description" content="一、视频地址慕课网 http://www.imooc.com/video/7965 二、直接上源码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980">
-<meta property="og:updated_time" content="2017-06-05T08:07:43.159Z">
+<meta property="og:description" content="一、视频地址慕课网 http://www.imooc.com/video/7965 二、直接上源码">
+<meta property="og:updated_time" content="2017-06-06T07:42:32.736Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js小爬虫">
-<meta name="twitter:description" content="一、视频地址慕课网 http://www.imooc.com/video/7965 二、直接上源码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980">
+<meta name="twitter:description" content="一、视频地址慕课网 http://www.imooc.com/video/7965 二、直接上源码">
   
     <link rel="alternative" href="/atom.xml" title="牟一全的博客" type="application/atom+xml">
   
@@ -185,7 +185,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="一、视频地址"><a href="#一、视频地址" class="headerlink" title="一、视频地址"></a>一、视频地址</h3><p>慕课网 <a href="http://www.imooc.com/video/7965" target="_blank" rel="external">http://www.imooc.com/video/7965</a></p>
-<h3 id="二、直接上源码"><a href="#二、直接上源码" class="headerlink" title="二、直接上源码"></a>二、直接上源码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/** * http小爬虫 </span></div><div class="line">* @author 牟一全</div><div class="line">* @version 1.0 </div><div class="line">*/ </div><div class="line"><span class="comment">/** </span></div><div class="line">* 获取http模块 </div><div class="line">*/ </div><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>); </div><div class="line"><span class="comment">/** </span></div><div class="line">* 获取cheerio模块 </div><div class="line">*/ </div><div class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">'./node_modules/cheerio'</span>); </div><div class="line"><span class="comment">/** </span></div><div class="line">* 解析的目标网页 </div><div class="line">*/ </div><div class="line"><span class="keyword">var</span> url = <span class="string">'http://www.imooc.com/learn/348'</span>; </div><div class="line"><span class="comment">/**</span></div><div class="line">* </div><div class="line">* 将爬取到的网页内容进行过滤调整 </div><div class="line">* @param &#123;string&#125; html </div><div class="line">* @returns &#123;&#123;chapterTitle:string,videos:[&#123;title:string,time:string,id:string&#125;]&#125;&#125; 返回过滤到的对象 */ </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">filterChapters</span>(<span class="params">html</span>) </span>&#123; </div><div class="line">	<span class="comment">// cheerio加载html </span></div><div class="line">	<span class="keyword">var</span> $ = cheerio.load(html); </div><div class="line">	<span class="keyword">var</span> chapters = $(<span class="string">'.chapter'</span>); </div><div class="line">	<span class="keyword">var</span> courseData = []; </div><div class="line">	<span class="keyword">var</span> chapter, Title, videos, chapterData; </div><div class="line">	<span class="keyword">var</span> videos, videoTitle, id; </div><div class="line">	chapters.each(<span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123; </div><div class="line">	chapter = $(<span class="keyword">this</span>); </div><div class="line">	<span class="comment">/** nodeType返回值说明 </span></div><div class="line">	* 1-ELEMENT </div><div class="line">	* 2-ATTRIBUTE </div><div class="line">	* 3-TEXT </div><div class="line">	* 4-CDATA </div><div class="line">	* 5-ENTITY REFERENCE </div><div class="line">	* 6-ENTITY </div><div class="line">	* 7-PI (processing instruction) </div><div class="line">	* 8-COMMENT </div><div class="line">	* 9-DOCUMENT </div><div class="line">	* 10-DOCUMENT TYPE </div><div class="line">	* 11-DOCUMENT FRAGMENT </div><div class="line">	* 12-NOTATION */ </div><div class="line">	<span class="comment">// 过滤不提取子类中的text </span></div><div class="line">	Title = chapter.find(<span class="string">'strong'</span>).contents().filter(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </div><div class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.nodeType == <span class="number">3</span>; </div><div class="line">	&#125;).text().trim(); </div><div class="line">	chapterData = &#123; </div><div class="line">		<span class="string">"chapterTitle"</span>: Title, </div><div class="line">		<span class="string">"videos"</span>: [] </div><div class="line">	&#125; </div><div class="line">	videos = chapter.find(<span class="string">'.video'</span>).children(<span class="string">'li'</span>); </div><div class="line">	videos.each(<span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123; </div><div class="line">		video = $(<span class="keyword">this</span>).find(<span class="string">'.J-media-item'</span>); </div><div class="line">		</div><div class="line">		<span class="comment">// 这个title包含了video的title和这个video的时间,两者用换行符分割 </span></div><div class="line">		videoTitles = video.contents().filter(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </div><div class="line">			<span class="keyword">return</span> <span class="keyword">this</span>.nodeType == <span class="number">3</span>; </div><div class="line">		&#125;).text().trim().split(<span class="string">'\n'</span>); </div><div class="line">		</div><div class="line">	id = video.attr(<span class="string">'href'</span>).split(<span class="string">'video/'</span>)[<span class="number">1</span>]; </div><div class="line">	</div><div class="line">	chapterData.videos.push(&#123; </div><div class="line">		<span class="string">"title"</span>: videoTitles[<span class="number">0</span>].trim(), </div><div class="line">		<span class="string">"time"</span>: videoTitles[<span class="number">1</span>].trim(), </div><div class="line">		<span class="string">"id"</span>: id </div><div class="line">		&#125;); </div><div class="line">	&#125;); </div><div class="line">	courseData.push(chapterData); </div><div class="line">	&#125;); </div><div class="line">	<span class="keyword">return</span> courseData; </div><div class="line">&#125; </div><div class="line"><span class="comment">/** </span></div><div class="line">* 打印课程信息 </div><div class="line">* @param &#123;&#123;chapterTitle:string,videos:[&#123;title:string,time:string,id:string&#125;]&#125;&#125; courseData 课程信息 </div><div class="line">*/ </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">printCoursrInfo</span>(<span class="params">courseData</span>) </span>&#123; </div><div class="line">	<span class="keyword">var</span> courseMessage = <span class="string">''</span>; </div><div class="line">	courseData.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">value, index</span>) </span>&#123; </div><div class="line">		courseMessage += value.chapterTitle + <span class="string">'\n'</span>; </div><div class="line">		value.videos.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">value, index</span>) </span>&#123; </div><div class="line">			courseMessage += <span class="string">'['</span> + value.id + <span class="string">'] '</span> + value.title + <span class="string">' time:'</span> + value.time + <span class="string">'\n'</span>; </div><div class="line">		&#125;); </div><div class="line">		courseMessage += <span class="string">'\n'</span>; </div><div class="line">	&#125;); </div><div class="line">	<span class="built_in">console</span>.log(courseMessage); </div><div class="line">&#125; </div><div class="line">http.get(url, <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123; </div><div class="line">	<span class="keyword">var</span> html = <span class="string">''</span>; </div><div class="line">	</div><div class="line">	res.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123; </div><div class="line">		html += data; </div><div class="line">	&#125;); </div><div class="line">	</div><div class="line">	res.on(<span class="string">'end'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </div><div class="line">		<span class="keyword">var</span> courseData = filterChapters(html); </div><div class="line">		printCoursrInfo(courseData); </div><div class="line">	&#125;); </div><div class="line">&#125;).on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="string">'课程爬取失败!!!!'</span>); &#125;);</div></pre></td></tr></table></figure>
+<h3 id="二、直接上源码"><a href="#二、直接上源码" class="headerlink" title="二、直接上源码"></a>二、直接上源码</h3><a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/** * http小爬虫 </span></div><div class="line">* @author 牟一全</div><div class="line">* @version 1.0 </div><div class="line">*/ </div><div class="line"><span class="comment">/** </span></div><div class="line">* 获取http模块 </div><div class="line">*/ </div><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>); </div><div class="line"><span class="comment">/** </span></div><div class="line">* 获取cheerio模块 </div><div class="line">*/ </div><div class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">'./node_modules/cheerio'</span>); </div><div class="line"><span class="comment">/** </span></div><div class="line">* 解析的目标网页 </div><div class="line">*/ </div><div class="line"><span class="keyword">var</span> url = <span class="string">'http://www.imooc.com/learn/348'</span>; </div><div class="line"><span class="comment">/**</span></div><div class="line">* </div><div class="line">* 将爬取到的网页内容进行过滤调整 </div><div class="line">* @param &#123;string&#125; html </div><div class="line">* @returns &#123;&#123;chapterTitle:string,videos:[&#123;title:string,time:string,id:string&#125;]&#125;&#125; 返回过滤到的对象 */ </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">filterChapters</span>(<span class="params">html</span>) </span>&#123; </div><div class="line">	<span class="comment">// cheerio加载html </span></div><div class="line">	<span class="keyword">var</span> $ = cheerio.load(html); </div><div class="line">	<span class="keyword">var</span> chapters = $(<span class="string">'.chapter'</span>); </div><div class="line">	<span class="keyword">var</span> courseData = []; </div><div class="line">	<span class="keyword">var</span> chapter, Title, videos, chapterData; </div><div class="line">	<span class="keyword">var</span> videos, videoTitle, id; </div><div class="line">	chapters.each(<span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123; </div><div class="line">	chapter = $(<span class="keyword">this</span>); </div><div class="line">	<span class="comment">/** nodeType返回值说明 </span></div><div class="line">	* 1-ELEMENT </div><div class="line">	* 2-ATTRIBUTE </div><div class="line">	* 3-TEXT </div><div class="line">	* 4-CDATA </div><div class="line">	* 5-ENTITY REFERENCE </div><div class="line">	* 6-ENTITY </div><div class="line">	* 7-PI (processing instruction) </div><div class="line">	* 8-COMMENT </div><div class="line">	* 9-DOCUMENT </div><div class="line">	* 10-DOCUMENT TYPE </div><div class="line">	* 11-DOCUMENT FRAGMENT </div><div class="line">	* 12-NOTATION */ </div><div class="line">	<span class="comment">// 过滤不提取子类中的text </span></div><div class="line">	Title = chapter.find(<span class="string">'strong'</span>).contents().filter(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </div><div class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.nodeType == <span class="number">3</span>; </div><div class="line">	&#125;).text().trim(); </div><div class="line">	chapterData = &#123; </div><div class="line">		<span class="string">"chapterTitle"</span>: Title, </div><div class="line">		<span class="string">"videos"</span>: [] </div><div class="line">	&#125; </div><div class="line">	videos = chapter.find(<span class="string">'.video'</span>).children(<span class="string">'li'</span>); </div><div class="line">	videos.each(<span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123; </div><div class="line">		video = $(<span class="keyword">this</span>).find(<span class="string">'.J-media-item'</span>); </div><div class="line">		</div><div class="line">		<span class="comment">// 这个title包含了video的title和这个video的时间,两者用换行符分割 </span></div><div class="line">		videoTitles = video.contents().filter(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </div><div class="line">			<span class="keyword">return</span> <span class="keyword">this</span>.nodeType == <span class="number">3</span>; </div><div class="line">		&#125;).text().trim().split(<span class="string">'\n'</span>); </div><div class="line">		</div><div class="line">	id = video.attr(<span class="string">'href'</span>).split(<span class="string">'video/'</span>)[<span class="number">1</span>]; </div><div class="line">	</div><div class="line">	chapterData.videos.push(&#123; </div><div class="line">		<span class="string">"title"</span>: videoTitles[<span class="number">0</span>].trim(), </div><div class="line">		<span class="string">"time"</span>: videoTitles[<span class="number">1</span>].trim(), </div><div class="line">		<span class="string">"id"</span>: id </div><div class="line">		&#125;); </div><div class="line">	&#125;); </div><div class="line">	courseData.push(chapterData); </div><div class="line">	&#125;); </div><div class="line">	<span class="keyword">return</span> courseData; </div><div class="line">&#125; </div><div class="line"><span class="comment">/** </span></div><div class="line">* 打印课程信息 </div><div class="line">* @param &#123;&#123;chapterTitle:string,videos:[&#123;title:string,time:string,id:string&#125;]&#125;&#125; courseData 课程信息 </div><div class="line">*/ </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">printCoursrInfo</span>(<span class="params">courseData</span>) </span>&#123; </div><div class="line">	<span class="keyword">var</span> courseMessage = <span class="string">''</span>; </div><div class="line">	courseData.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">value, index</span>) </span>&#123; </div><div class="line">		courseMessage += value.chapterTitle + <span class="string">'\n'</span>; </div><div class="line">		value.videos.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">value, index</span>) </span>&#123; </div><div class="line">			courseMessage += <span class="string">'['</span> + value.id + <span class="string">'] '</span> + value.title + <span class="string">' time:'</span> + value.time + <span class="string">'\n'</span>; </div><div class="line">		&#125;); </div><div class="line">		courseMessage += <span class="string">'\n'</span>; </div><div class="line">	&#125;); </div><div class="line">	<span class="built_in">console</span>.log(courseMessage); </div><div class="line">&#125; </div><div class="line">http.get(url, <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123; </div><div class="line">	<span class="keyword">var</span> html = <span class="string">''</span>; </div><div class="line">	</div><div class="line">	res.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123; </div><div class="line">		html += data; </div><div class="line">	&#125;); </div><div class="line">	</div><div class="line">	res.on(<span class="string">'end'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </div><div class="line">		<span class="keyword">var</span> courseData = filterChapters(html); </div><div class="line">		printCoursrInfo(courseData); </div><div class="line">	&#125;); </div><div class="line">&#125;).on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="string">'课程爬取失败!!!!'</span>); &#125;);</div></pre></td></tr></table></figure>
 <h3 id="三、什么是cheerio"><a href="#三、什么是cheerio" class="headerlink" title="三、什么是cheerio"></a>三、什么是cheerio</h3><p>相当于html的jquery，但是服务的是服务端，就不是前端了</p>
 <h3 id="四、说明"><a href="#四、说明" class="headerlink" title="四、说明"></a>四、说明</h3><p>只能爬取静态页面的资源，比如ajax动态渲染是爬取不到的</p>
 <h3 id="五、体会"><a href="#五、体会" class="headerlink" title="五、体会"></a>五、体会</h3><p>在each循环内部反复的声明变量会使内存没有必要的损耗,更好的做法是延长变量的生命周期,在函数的顶部先定义,然后每次改变它们的值,由于这些变量本身的类型还是一致的,职责单一,在V8的速度上也会更快，最好还是在上一级申明变量，避免重复声明。</p>
@@ -462,15 +463,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Node.js事件监听模块</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Node.js小爬虫</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">月总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">经验之谈</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -490,19 +487,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Http知识</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Http概念进阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Node.js入门编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Node.js知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Node.js概念进阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Http</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Http源码解读</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -514,11 +515,35 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Js回调函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Http知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">状态码</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">windowsCmd</a>
+                <a href="javascript:void(0)" class="js-tag color4">月总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">经验之谈</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">单线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">多线程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -530,6 +555,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">选择大学</a>
               </li>
              
@@ -538,7 +567,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Node.js事件监听模块</a>
+                <a href="javascript:void(0)" class="js-tag color1">windowsCmd</a>
               </li>
             
             <div class="clearfix"></div>
