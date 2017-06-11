@@ -164,6 +164,359 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-mongodb安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/11/mongodb安装/">mongodb安装</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/11/mongodb安装/" class="archive-article-date">
+  	<time datetime="2017-06-11T14:18:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、下载"><a href="#一、下载" class="headerlink" title="一、下载"></a>一、下载</h3><p><code>link:</code><a href="https://www.mongodb.com/download-center?jmp=nav#community" target="_blank" rel="external">https://www.mongodb.com/download-center?jmp=nav#community</a><br>windows安装选择download msi<br>下完之后一直next就好</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mongodb</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/mongodb/" class="article-tag-list-link color3">mongodb</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/11/mongodb安装/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-Express生成项目文件讲解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/08/Express生成项目文件讲解/">Express生成项目文件讲解</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/08/Express生成项目文件讲解/" class="archive-article-date">
+  	<time datetime="2017-06-08T01:58:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我们使用express生了package.json，它只产生了javascript和route/index.js。模板引擎ejs文件有index.js，此外还有样式表style.css。</p>
+<h3 id="一、app-js工程的入口"><a href="#一、app-js工程的入口" class="headerlink" title="一、app.js工程的入口"></a>一、app.js工程的入口</h3><p>&emsp;分析代码:<br>1.我们导入了express模块，前面我们通过npm install依赖上了,在这里就可以直接通过require获取。<br>2.route是一个文件夹形式的本地模块，即./route/index.js，它的功能是伪指定的路径组织返回内容，相对于MVC架构的控制器。<br>3.通过express.createServer()函数创建一个应用的实例，后面的所有操作都是针对这个实例进行。<br>4.app.set是Express的参数设置工具，接受一个键(key)和一个值(value)，可以用的参数如下：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>basepath</td>
+<td>基础机制，通常用于res.redirect()跳转</td>
+</tr>
+<tr>
+<td>views</td>
+<td>视图文件的目录，存放模块文件</td>
+</tr>
+<tr>
+<td>view engine</td>
+<td>视图模块引擎(推荐使用ejs)</td>
+</tr>
+<tr>
+<td>view options</td>
+<td>全局视图参数对象</td>
+</tr>
+<tr>
+<td>view cache</td>
+<td>启用视图缓存</td>
+</tr>
+<tr>
+<td>case sensitive routes</td>
+<td>路径区分大小写</td>
+</tr>
+<tr>
+<td>strict routing</td>
+<td>严格模式，启用后不会忽略路径末尾的”/“</td>
+</tr>
+<tr>
+<td>json callback</td>
+<td>开启透明的jsonp支持</td>
+</tr>
+</tbody>
+</table>
+<p>5.Express依赖于connect，提供了大量的中间件，可以通过app.use启用。app.connect中启用了五个中间件:<br>bodyParse:解析客户端请求<br>router: 项目路径的支持<br>static： 提供静态文件支持<br>errorHandler:错误控制器<br>6.app.get(‘/‘,routes.index)，是一个路由控制器，用户访问’/‘路径，则routes.index来控制。</p>
+<h3 id="二、routes-index-js是路由文件，相当于控制器，用于组织展示的内容"><a href="#二、routes-index-js是路由文件，相当于控制器，用于组织展示的内容" class="headerlink" title="二、routes/index.js是路由文件，相当于控制器，用于组织展示的内容"></a>二、routes/index.js是路由文件，相当于控制器，用于组织展示的内容</h3><p>&emsp;app.js通过app.get(‘/‘,routes.index)将</p>
+<h3 id="三、我的项目app-js源码"><a href="#三、我的项目app-js源码" class="headerlink" title="三、我的项目app.js源码"></a>三、我的项目app.js源码</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Module dependencies.</div><div class="line"> */</div><div class="line"><span class="comment">/*引用模块*/</span></div><div class="line"><span class="keyword">var</span> express = <span class="keyword">require</span>(<span class="string">'express'</span>)</div><div class="line">  , routes = <span class="keyword">require</span>(<span class="string">'./routes'</span>)</div><div class="line">  , user = <span class="keyword">require</span>(<span class="string">'./routes/user'</span>)</div><div class="line">  , http = <span class="keyword">require</span>(<span class="string">'http'</span>)</div><div class="line">  , util=<span class="keyword">require</span>(<span class="string">'util'</span>)</div><div class="line">  , path = <span class="keyword">require</span>(<span class="string">'path'</span>)</div><div class="line">  ,engine=<span class="keyword">require</span>(<span class="string">'./system'</span>);</div><div class="line"><span class="comment">/*实例化express对象*/</span></div><div class="line"><span class="keyword">var</span> app = express();</div><div class="line"></div><div class="line"><span class="comment">/*配置app的参数和启用中间件*/</span></div><div class="line">app.configure(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">  app.set(<span class="string">'port'</span>, process.env.PORT || <span class="number">3000</span>);</div><div class="line">  <span class="comment">//告诉我们的页面模版目录</span></div><div class="line">  app.set(<span class="string">'views'</span>, __dirname + <span class="string">'/views'</span>);</div><div class="line">  <span class="comment">//告诉它我们使用那种模版引擎</span></div><div class="line">  app.set(<span class="string">'view engine'</span>, <span class="string">'ejs'</span>);</div><div class="line">  app.<span class="keyword">use</span>(express.favicon());</div><div class="line">  app.<span class="keyword">use</span>(express.logger(<span class="string">'dev'</span>));</div><div class="line">  app.<span class="keyword">use</span>(express.bodyParser());</div><div class="line">  app.<span class="keyword">use</span>(express.methodOverride());</div><div class="line">  app.<span class="keyword">use</span>(app.router);</div><div class="line">  app.<span class="keyword">use</span>(express.<span class="keyword">static</span>(path.join(__dirname, <span class="string">'public'</span>)));</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//配置开发模式</span></div><div class="line">app.configure(<span class="string">'development'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">  app.<span class="keyword">use</span>(express.errorHandler());</div><div class="line">&#125;);</div><div class="line"><span class="comment">//指定路由控制</span></div><div class="line">app.get(<span class="string">'/'</span>, routes.index);</div><div class="line">app.get(<span class="string">'/pcat'</span>, routes.pcat);</div><div class="line">app.get(<span class="string">'/user/:username'</span>,<span class="function"><span class="keyword">function</span><span class="params">(req,res)</span></span>&#123;</div><div class="line">            res.send(<span class="string">"user ："</span>+req.params.username);</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">app.get(<span class="string">'/users'</span>, user.<span class="keyword">list</span>);</div><div class="line">app.all(<span class="string">'/test/:username'</span>,<span class="function"><span class="keyword">function</span><span class="params">(req,res,next)</span></span>&#123;</div><div class="line">	console.log(<span class="string">"all methods is call"</span>);</div><div class="line">	<span class="comment">//我们在这里验证用户名是否存在。</span></div><div class="line">	<span class="comment">//如果存在直接send或者调用next(new Error('用户已经存在'));</span></div><div class="line">	<span class="comment">//如果不存在我们调用next()把控制权交给下一个路由规则</span></div><div class="line">	next();</div><div class="line">	res.send(<span class="string">'all的路由规则完毕。'</span>)</div><div class="line">&#125;);</div><div class="line"> app.get(<span class="string">'/test/:username'</span>,<span class="function"><span class="keyword">function</span><span class="params">(req,res)</span></span>&#123;</div><div class="line">     res.send(<span class="string">"user："</span>+req.params.username)</div><div class="line">&#125;)</div><div class="line">app.get(<span class="string">'/abc'</span>,routes.pcat)</div><div class="line"><span class="comment">//改造ejs引擎中的方法</span></div><div class="line">app.engine(<span class="string">'ejs'</span>, engine);</div><div class="line"><span class="comment">//将layout的模版布局模版设置为默认</span></div><div class="line">app.locals._layoutFile=<span class="string">'layout'</span></div><div class="line"><span class="comment">//片段视图</span></div><div class="line">app.get(<span class="string">'/list'</span>,<span class="function"><span class="keyword">function</span><span class="params">(req,res)</span></span>&#123;</div><div class="line">	res.render(<span class="string">'list'</span>,&#123;</div><div class="line">		title:<span class="string">'片段视图'</span>,</div><div class="line">		items:[<span class="string">'marico'</span>,<span class="number">1991</span>,<span class="string">'pcat'</span>]</div><div class="line">	&#125;)</div><div class="line">&#125;);</div><div class="line"><span class="comment">//视图助手</span></div><div class="line">app.locals(&#123;</div><div class="line">	inspect:<span class="function"><span class="keyword">function</span><span class="params">(obj)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> util.inspect(obj,<span class="keyword">true</span>)+<span class="string">"    解析成功"</span>;</div><div class="line">	&#125;</div><div class="line">&#125;)</div><div class="line">app.get(<span class="string">'/view'</span>,<span class="function"><span class="keyword">function</span><span class="params">(req,res)</span></span>&#123;</div><div class="line">	res.locals(&#123;</div><div class="line">		headers:<span class="function"><span class="keyword">function</span><span class="params">(req,res)</span></span>&#123;</div><div class="line">			<span class="keyword">return</span> req.headers;</div><div class="line">		&#125;</div><div class="line">	&#125;)</div><div class="line">	res.render(<span class="string">'view'</span>,&#123;title:<span class="string">"PCAT"</span>&#125;);</div><div class="line">&#125;)</div><div class="line"><span class="comment">//创建服务并监听端口</span></div><div class="line">http.createServer(app).listen(app.get(<span class="string">'port'</span>), <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">  console.log(<span class="string">"Express server listening on port "</span> + app.get(<span class="string">'port'</span>));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Express</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Node.js/" class="article-tag-list-link color3">Node.js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Express/" class="article-tag-list-link color3">Express</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/08/Express生成项目文件讲解/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-Node-js之windows安装Express框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/08/Node-js之windows安装Express框架/">Node.js之windows安装Express框架</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/08/Node-js之windows安装Express框架/" class="archive-article-date">
+  	<time datetime="2017-06-08T01:19:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、基础条件"><a href="#一、基础条件" class="headerlink" title="一、基础条件"></a>一、基础条件</h3><p>在你的windows上已经安装了node.js的基础上再安装express</p>
+<h3 id="二、安装Express"><a href="#二、安装Express" class="headerlink" title="二、安装Express"></a>二、安装Express</h3><p><strong>第一步</strong>:执行 <code>npm install -g express-generator</code><br>note:必须安装这个,不然创建express项目的时候会提示express命令没有找到<br><strong>第二步</strong>:执行 <code>npm install -g express</code><br><strong>第三步</strong>:执行<code>express -V</code>(有些可能不支持)<br>note:’V’是大写的,如果express安装成功会显示版本号</p>
+<h3 id="三、创建一个Express项目"><a href="#三、创建一个Express项目" class="headerlink" title="三、创建一个Express项目"></a>三、创建一个Express项目</h3><p><strong>第一步</strong>:执行 <code>express youProjectName</code><br>note:youProjectName是你的项目的名称,按照自己的要求选择合适的项目名称</p>
+<p><strong>第二步</strong> :进入你的项目:<code>cd youProjectName</code></p>
+<p><strong>第三步</strong>:在你的项目的目录下执行 <code>npm install</code></p>
+<p><strong>第四步</strong>:启动你的项目,执行 <code>npm start</code></p>
+<h3 id="四、最后在浏览器中访问你的项目"><a href="#四、最后在浏览器中访问你的项目" class="headerlink" title="四、最后在浏览器中访问你的项目"></a>四、最后在浏览器中访问你的项目</h3><p>打开你的浏览器,在地址栏中输入:<a href="http://127.0.0.1:3000" target="_blank" rel="external">http://127.0.0.1:3000</a></p>
+<p>然后你会看到:express的欢迎信息 </p>
+<h3 id="五、建议"><a href="#五、建议" class="headerlink" title="五、建议"></a>五、建议</h3><p>为了降低学习难度，我建议使用<code>express ejs yourProjectName</code>;<br>不建议使用<code>Jade</code>;</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Express</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Node.js/" class="article-tag-list-link color3">Node.js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Express/" class="article-tag-list-link color3">Express</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/08/Node-js之windows安装Express框架/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-http请求一个网页所经过的所有操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/07/http请求一个网页所经过的所有操作/">http请求一个网页所经过的所有操作</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/07/http请求一个网页所经过的所有操作/" class="archive-article-date">
+  	<time datetime="2017-06-07T14:52:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、自己的一个http请求的理解"><a href="#一、自己的一个http请求的理解" class="headerlink" title="一、自己的一个http请求的理解"></a>一、自己的一个http请求的理解</h3><p>1.Chrome搜索自身的DNS缓存<br><code>chrome://net-internals/#dns</code>曾经浏览过的网站的dns<br>2.搜索操作系统自身的DNS缓存(浏览器没有找到缓存或缓存已经失效)<br>3.读取本地的HOST文件<br>4.浏览器发起一个DNS的一个系统调用<br>&emsp;4.1宽带运营商服务器查看本地缓存<br>&emsp;4.2运营商服务器发起一个迭代DNS解析的请求<br>&emsp;&emsp;<code>运营商服务器把结果返回给操作系统内核同时缓存起来</code><br>&emsp;&emsp;<code>操作系统内核把结果返回浏览器</code><br>&emsp;&emsp;<code>最终浏览器拿到了url对应的IP地址</code><br>5.浏览器获得域名对应的IP地址后，发起HTTP”三次握手”<br>6.TCP/IP连接建立起来后，浏览器就可以向服务器发送HTTP请求了。<br>eg:用HTTP的GET方法请求一个根域名里的一个域名，协议可以采用HTTP1.0的一个协议。<br>7.服务器端接受到请求后，根据路径参数，经过后端的一些处理之后，把处理后的一个结果的数据返回给浏览器。如果是一个页面，就会把完整的HTML页面代码返回给浏览器。<br>8.浏览器拿到页面的完整HTML页面代码，在解析和渲染这个页面的时候，里面的JS和CSS、图片静态资源，它们同样也是一个个HTTP请求都需要经过上面的主要的七个步骤。<br>9.浏览器根据拿到的资源对页面进行渲染，最终把一个完整的页面呈献给用户。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Http</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">访问url的过程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Http/" class="article-tag-list-link color5">Http</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/07/http请求一个网页所经过的所有操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-单线程与多线程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -224,304 +577,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/06/06/单线程与多线程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-js回调函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/06/js回调函数/">js回调函数</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/06/js回调函数/" class="archive-article-date">
-  	<time datetime="2017-06-06T08:17:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><code>回调函数的传递</code><br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Js回调函数</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Js/" class="article-tag-list-link color3">Js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/06/js回调函数/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Node.js事件模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/05/Node.js事件模块/">Node.js事件模块</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/05/Node.js事件模块/" class="archive-article-date">
-  	<time datetime="2017-06-05T08:09:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、视频地址"><a href="#一、视频地址" class="headerlink" title="一、视频地址"></a>一、视频地址</h3><p>慕课网 <a href="http://www.imooc.com/video/8525" target="_blank" rel="external">http://www.imooc.com/video/8525</a><br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Node.js事件监听模块</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Node.js/" class="article-tag-list-link color3">Node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/05/Node.js事件模块/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Node.js小爬虫" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/05/Node.js小爬虫/">Node.js小爬虫</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/05/Node.js小爬虫/" class="archive-article-date">
-  	<time datetime="2017-06-05T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、视频地址"><a href="#一、视频地址" class="headerlink" title="一、视频地址"></a>一、视频地址</h3><p>慕课网 <a href="http://www.imooc.com/video/7965" target="_blank" rel="external">http://www.imooc.com/video/7965</a></p>
-<h3 id="二、直接上源码"><a href="#二、直接上源码" class="headerlink" title="二、直接上源码"></a>二、直接上源码</h3>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Node.js小爬虫</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Node.js/" class="article-tag-list-link color3">Node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/05/Node.js小爬虫/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-http源码解读" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/05/http源码解读/">http源码解读</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/05/http源码解读/" class="archive-article-date">
-  	<time datetime="2017-06-05T06:04:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、视频地址"><a href="#一、视频地址" class="headerlink" title="一、视频地址"></a>一、视频地址</h3><p>慕课网 <a href="http://www.imooc.com/video/7963" target="_blank" rel="external">http://www.imooc.com/video/7963</a></p>
-<h3 id="二、源码"><a href="#二、源码" class="headerlink" title="二、源码"></a>二、源码</h3>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Http</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Http源码解读</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Http/" class="article-tag-list-link color5">Http</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/05/http源码解读/">展开全文 >></a>
         </p>
       
 
@@ -653,14 +708,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">月总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">经验之谈</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
@@ -673,7 +720,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Node.js入门编程</a>
+                <a href="javascript:void(0)" class="js-tag color3">Express</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -681,7 +728,39 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">月总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">经验之谈</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Node.js小爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Node.js安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Js作用域</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Js上下文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">静态建站</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Node.js入门编程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -693,19 +772,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Node.js安装</a>
+                <a href="javascript:void(0)" class="js-tag color2">Http知识</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">静态建站</a>
+                <a href="javascript:void(0)" class="js-tag color4">状态码</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -717,11 +788,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Http知识</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">状态码</a>
+                <a href="javascript:void(0)" class="js-tag color3">mongodb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -733,19 +804,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">windowsCmd</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">windowsCmd</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -765,11 +832,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Js作用域</a>
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Js上下文</a>
+                <a href="javascript:void(0)" class="js-tag color4">访问url的过程</a>
               </li>
             
             <div class="clearfix"></div>
