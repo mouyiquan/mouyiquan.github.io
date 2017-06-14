@@ -3,6 +3,57 @@
   
     
     <entry>
+      <title><![CDATA[走进SVG]]></title>
+      <url>/2017/06/14/%E8%B5%B0%E8%BF%9BSVG/</url>
+      <content type="html"><![CDATA[<h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><p>SVG 意为可缩放矢量图形（Scalable Vector Graphics）。<br>SVG 使用 XML 格式定义图像。<br>SVG 文件必须使用 <code>.svg</code>后缀来保存<br><a id="more"></a></p>
+<h3 id="二、SVG优势"><a href="#二、SVG优势" class="headerlink" title="二、SVG优势"></a>二、SVG优势</h3><p>SVG 的主要竞争者是 Flash。</p>
+<p>与 Flash 相比，SVG 最大的优势是与其他标准（比如 XSL 和 DOM）相兼容。而 Flash 则是未开源的私有技术。</p>
+<h3 id="三、使用方式"><a href="#三、使用方式" class="headerlink" title="三、使用方式"></a>三、使用方式</h3><p>1.浏览器直接打开<br>2.在HTML中使用<code>&lt;img&gt;</code>标签<br>3.直接在HTML中使用SVG标签<br>4.作为CSS背景</p>
+<h3 id="四、基本图形和属性"><a href="#四、基本图形和属性" class="headerlink" title="四、基本图形和属性"></a>四、基本图形和属性</h3><h4 id="基本图形"><a href="#基本图形" class="headerlink" title="基本图形"></a>基本图形</h4><p><code>&lt;rect&gt;</code>、<code>&lt;circle&gt;</code>、<code>&lt;ellipse&gt;</code>、<code>&lt;line&gt;</code>、<code>&lt;polyline&gt;</code>、<code>&lt;polygon&gt;</code><br><img src="/imgs/svgRect.png"><br><img src="/imgs/svgCircle.png"><br><img src="/imgs/svgEllipse.png"><br><img src="/imgs/svgLine.png"><br><img src="/imgs/svgPolyline.png"><br><img src="/imgs/svgPolygon.png"><br>.</p>
+<h4 id="基本属性"><a href="#基本属性" class="headerlink" title="基本属性"></a>基本属性</h4><p><code>fill</code>、<code>strock</code>、<code>strock-width</code>、<code>transform</code><br><img src="/imgs/svgProperty.png"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> svg </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> svg </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[webstorm注册]]></title>
+      <url>/2017/06/11/webstorm%E6%B3%A8%E5%86%8C/</url>
+      <content type="html"><![CDATA[<h3 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h3><p><code>link:</code><a href="http://www.jetbrains.com/webstorm/download/#section=windows" target="_blank" rel="external">http://www.jetbrains.com/webstorm/download/#section=windows</a><br>安装过程就不说了，一直next<br><a id="more"></a></p>
+<h3 id="二、注册"><a href="#二、注册" class="headerlink" title="二、注册"></a>二、注册</h3><p>安装完之后弹出注册。(也可以进入主页之后点击help-&gt;Register)</p>
+<p>在打开的 License Activation 窗口中选择 License server。<br>在输入框输入网址：</p>
+<p><a href="http://idea.iteblog.com/key.php" target="_blank" rel="external">http://idea.iteblog.com/key.php</a></p>
+<p>最后点击 Activate。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> webstorm </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> webstorm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[mongodb安装]]></title>
       <url>/2017/06/11/mongodb%E5%AE%89%E8%A3%85/</url>
       <content type="html"><![CDATA[<h3 id="一、下载"><a href="#一、下载" class="headerlink" title="一、下载"></a>一、下载</h3><p><code>link:</code><a href="https://www.mongodb.com/download-center?jmp=nav#community" target="_blank" rel="external">https://www.mongodb.com/download-center?jmp=nav#community</a><br>windows安装选择download msi<br>下完之后一直next就好</p>
@@ -26,7 +77,7 @@
     <entry>
       <title><![CDATA[Express生成项目文件讲解]]></title>
       <url>/2017/06/08/Express%E7%94%9F%E6%88%90%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E8%AE%B2%E8%A7%A3/</url>
-      <content type="html"><![CDATA[<p>我们使用express生了package.json，它只产生了javascript和route/index.js。模板引擎ejs文件有index.js，此外还有样式表style.css。</p>
+      <content type="html"><![CDATA[<p>我们使用express生了package.json，它只产生了javascript和route/index.js。模板引擎ejs文件有index.js，此外还有样式表style.css。<br><a id="more"></a></p>
 <h3 id="一、app-js工程的入口"><a href="#一、app-js工程的入口" class="headerlink" title="一、app.js工程的入口"></a>一、app.js工程的入口</h3><p>&emsp;分析代码:<br>1.我们导入了express模块，前面我们通过npm install依赖上了,在这里就可以直接通过require获取。<br>2.route是一个文件夹形式的本地模块，即./route/index.js，它的功能是伪指定的路径组织返回内容，相对于MVC架构的控制器。<br>3.通过express.createServer()函数创建一个应用的实例，后面的所有操作都是针对这个实例进行。<br>4.app.set是Express的参数设置工具，接受一个键(key)和一个值(value)，可以用的参数如下：</p>
 <table>
 <thead>
@@ -96,7 +147,7 @@
     <entry>
       <title><![CDATA[Node.js之windows安装Express框架]]></title>
       <url>/2017/06/08/Node-js%E4%B9%8Bwindows%E5%AE%89%E8%A3%85Express%E6%A1%86%E6%9E%B6/</url>
-      <content type="html"><![CDATA[<h3 id="一、基础条件"><a href="#一、基础条件" class="headerlink" title="一、基础条件"></a>一、基础条件</h3><p>在你的windows上已经安装了node.js的基础上再安装express</p>
+      <content type="html"><![CDATA[<h3 id="一、基础条件"><a href="#一、基础条件" class="headerlink" title="一、基础条件"></a>一、基础条件</h3><p>在你的windows上已经安装了node.js的基础上再安装express<br><a id="more"></a></p>
 <h3 id="二、安装Express"><a href="#二、安装Express" class="headerlink" title="二、安装Express"></a>二、安装Express</h3><p><strong>第一步</strong>:执行 <code>npm install -g express-generator</code><br>note:必须安装这个,不然创建express项目的时候会提示express命令没有找到<br><strong>第二步</strong>:执行 <code>npm install -g express</code><br><strong>第三步</strong>:执行<code>express -V</code>(有些可能不支持)<br>note:’V’是大写的,如果express安装成功会显示版本号</p>
 <h3 id="三、创建一个Express项目"><a href="#三、创建一个Express项目" class="headerlink" title="三、创建一个Express项目"></a>三、创建一个Express项目</h3><p><strong>第一步</strong>:执行 <code>express youProjectName</code><br>note:youProjectName是你的项目的名称,按照自己的要求选择合适的项目名称</p>
 <p><strong>第二步</strong> :进入你的项目:<code>cd youProjectName</code></p>
@@ -129,7 +180,7 @@
     <entry>
       <title><![CDATA[http请求一个网页所经过的所有操作]]></title>
       <url>/2017/06/07/http%E8%AF%B7%E6%B1%82%E4%B8%80%E4%B8%AA%E7%BD%91%E9%A1%B5%E6%89%80%E7%BB%8F%E8%BF%87%E7%9A%84%E6%89%80%E6%9C%89%E6%93%8D%E4%BD%9C/</url>
-      <content type="html"><![CDATA[<h3 id="一、自己的一个http请求的理解"><a href="#一、自己的一个http请求的理解" class="headerlink" title="一、自己的一个http请求的理解"></a>一、自己的一个http请求的理解</h3><p>1.Chrome搜索自身的DNS缓存<br><code>chrome://net-internals/#dns</code>曾经浏览过的网站的dns<br>2.搜索操作系统自身的DNS缓存(浏览器没有找到缓存或缓存已经失效)<br>3.读取本地的HOST文件<br>4.浏览器发起一个DNS的一个系统调用<br>&emsp;4.1宽带运营商服务器查看本地缓存<br>&emsp;4.2运营商服务器发起一个迭代DNS解析的请求<br>&emsp;&emsp;<code>运营商服务器把结果返回给操作系统内核同时缓存起来</code><br>&emsp;&emsp;<code>操作系统内核把结果返回浏览器</code><br>&emsp;&emsp;<code>最终浏览器拿到了url对应的IP地址</code><br>5.浏览器获得域名对应的IP地址后，发起HTTP”三次握手”<br>6.TCP/IP连接建立起来后，浏览器就可以向服务器发送HTTP请求了。<br>eg:用HTTP的GET方法请求一个根域名里的一个域名，协议可以采用HTTP1.0的一个协议。<br>7.服务器端接受到请求后，根据路径参数，经过后端的一些处理之后，把处理后的一个结果的数据返回给浏览器。如果是一个页面，就会把完整的HTML页面代码返回给浏览器。<br>8.浏览器拿到页面的完整HTML页面代码，在解析和渲染这个页面的时候，里面的JS和CSS、图片静态资源，它们同样也是一个个HTTP请求都需要经过上面的主要的七个步骤。<br>9.浏览器根据拿到的资源对页面进行渲染，最终把一个完整的页面呈献给用户。</p>
+      <content type="html"><![CDATA[<h3 id="一、自己的一个http请求的理解"><a href="#一、自己的一个http请求的理解" class="headerlink" title="一、自己的一个http请求的理解"></a>一、自己的一个http请求的理解</h3><p>1.Chrome搜索自身的DNS缓存<br><code>chrome://net-internals/#dns</code>曾经浏览过的网站的dns<br><a id="more"></a><br>2.搜索操作系统自身的DNS缓存(浏览器没有找到缓存或缓存已经失效)<br>3.读取本地的HOST文件<br>4.浏览器发起一个DNS的一个系统调用<br>&emsp;4.1宽带运营商服务器查看本地缓存<br>&emsp;4.2运营商服务器发起一个迭代DNS解析的请求<br>&emsp;&emsp;<code>运营商服务器把结果返回给操作系统内核同时缓存起来</code><br>&emsp;&emsp;<code>操作系统内核把结果返回浏览器</code><br>&emsp;&emsp;<code>最终浏览器拿到了url对应的IP地址</code><br>5.浏览器获得域名对应的IP地址后，发起HTTP”三次握手”<br>6.TCP/IP连接建立起来后，浏览器就可以向服务器发送HTTP请求了。<br>eg:用HTTP的GET方法请求一个根域名里的一个域名，协议可以采用HTTP1.0的一个协议。<br>7.服务器端接受到请求后，根据路径参数，经过后端的一些处理之后，把处理后的一个结果的数据返回给浏览器。如果是一个页面，就会把完整的HTML页面代码返回给浏览器。<br>8.浏览器拿到页面的完整HTML页面代码，在解析和渲染这个页面的时候，里面的JS和CSS、图片静态资源，它们同样也是一个个HTTP请求都需要经过上面的主要的七个步骤。<br>9.浏览器根据拿到的资源对页面进行渲染，最终把一个完整的页面呈献给用户。</p>
 ]]></content>
       
         <categories>

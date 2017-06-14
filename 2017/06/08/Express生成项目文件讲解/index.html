@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://ctbumyq.github.io/2017/06/08/Express生成项目文件讲解/index.html">
 <meta property="og:site_name" content="牟一全的博客">
 <meta property="og:description" content="Express项目生成文件讲解">
-<meta property="og:updated_time" content="2017-06-08T15:17:55.978Z">
+<meta property="og:updated_time" content="2017-06-14T12:40:12.244Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Express生成项目文件讲解">
 <meta name="twitter:description" content="Express项目生成文件讲解">
@@ -184,7 +184,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我们使用express生了package.json，它只产生了javascript和route/index.js。模板引擎ejs文件有index.js，此外还有样式表style.css。</p>
+        <p>我们使用express生了package.json，它只产生了javascript和route/index.js。模板引擎ejs文件有index.js，此外还有样式表style.css。<br><a id="more"></a></p>
 <h3 id="一、app-js工程的入口"><a href="#一、app-js工程的入口" class="headerlink" title="一、app.js工程的入口"></a>一、app.js工程的入口</h3><p>&emsp;分析代码:<br>1.我们导入了express模块，前面我们通过npm install依赖上了,在这里就可以直接通过require获取。<br>2.route是一个文件夹形式的本地模块，即./route/index.js，它的功能是伪指定的路径组织返回内容，相对于MVC架构的控制器。<br>3.通过express.createServer()函数创建一个应用的实例，后面的所有操作都是针对这个实例进行。<br>4.app.set是Express的参数设置工具，接受一个键(key)和一个值(value)，可以用的参数如下：</p>
 <table>
 <thead>
@@ -632,6 +632,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Js上下文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">webstorm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">svg</a>
               </li>
             
             <div class="clearfix"></div>
