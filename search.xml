@@ -3,6 +3,33 @@
   
     
     <entry>
+      <title><![CDATA[svg基于操作API]]></title>
+      <url>/2017/06/14/svg%E5%9F%BA%E4%BA%8E%E6%93%8D%E4%BD%9CAPI/</url>
+      <content type="html"><![CDATA[<h3 id="一、基于操作的API"><a href="#一、基于操作的API" class="headerlink" title="一、基于操作的API"></a>一、基于操作的API</h3><h4 id="创建图形"><a href="#创建图形" class="headerlink" title="创建图形"></a>创建图形</h4><p><code>document.createElementNS(ns,tagName)</code><br><a id="more"></a></p>
+<h4 id="添加图形"><a href="#添加图形" class="headerlink" title="添加图形"></a>添加图形</h4><p><code>element.appendChild(childElement)</code></p>
+<h4 id="设置属性"><a href="#设置属性" class="headerlink" title="设置属性"></a>设置属性</h4><p><code>element.setAttribute(name,value)</code><br><code>element.getAttribute(name)</code></p>
+]]></content>
+      
+        <categories>
+            
+            <category> svg </category>
+            
+            <category> API </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> svg </tag>
+            
+            <tag> API </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[走进SVG]]></title>
       <url>/2017/06/14/%E8%B5%B0%E8%BF%9BSVG/</url>
       <content type="html"><![CDATA[<h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><p>SVG 意为可缩放矢量图形（Scalable Vector Graphics）。<br>SVG 使用 XML 格式定义图像。<br>SVG 文件必须使用 <code>.svg</code>后缀来保存<br><a id="more"></a></p>
@@ -789,14 +816,14 @@
     </entry>
     
     <entry>
-      <title><![CDATA[about]]></title>
-      <url>/about/index.html</url>
+      <title><![CDATA[tags]]></title>
+      <url>/tags/index.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
-      <title><![CDATA[tags]]></title>
-      <url>/tags/index.html</url>
+      <title><![CDATA[about]]></title>
+      <url>/about/index.html</url>
       <content type="html"></content>
     </entry>
     
