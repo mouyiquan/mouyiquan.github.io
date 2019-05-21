@@ -116,7 +116,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://mouyiquan.github.io/2019/05/21/一条SQL查询语句是如何执行的？/mysql-basic-frame.png">
 <meta property="og:image" content="https://mouyiquan.github.io/2019/05/21/一条SQL查询语句是如何执行的？/mysql-command-show-processlist.png">
-<meta property="og:updated_time" content="2019-05-21T09:48:06.994Z">
+<meta property="og:updated_time" content="2019-05-21T10:05:15.677Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一条SQL查询语句是如何执行的？">
 <meta name="twitter:description" content="一条SQL查询语句需要经过哪些步骤?">
@@ -432,7 +432,7 @@
                 
               
 
-              <time title="创建时间：2019-05-21 09:06:38 / 修改时间：17:48:06" itemprop="dateCreated datePublished" datetime="2019-05-21T09:06:38+08:00">2019-05-21</time>
+              <time title="创建时间：2019-05-21 09:06:38 / 修改时间：18:05:15" itemprop="dateCreated datePublished" datetime="2019-05-21T09:06:38+08:00">2019-05-21</time>
             
 
             
@@ -513,9 +513,9 @@
 <p>&emsp;&emsp;<strong>show processlist</strong>命令用于查看当前MySQL的连接数，其中command列值为sleep的行表示该连接空闲，由于sleep连接线程申请的资源会在该连接关闭时才会释放，过多的sleep经常会造成MySQL占用内存巨增，导致内存占用太大，被系统强行杀掉（OOM[^1]）。<br><img src="/2019/05/21/一条SQL查询语句是如何执行的？/mysql-command-show-processlist.png" alt="MySQL服务当前连接用户状态图"></p>
 <center>MySQL服务当前连接用户状态图</center> 
 
-<p>&emsp;&emsp;<strong>为什么长连接<a href="我称之能够被大量复用的连接为长连接，很少或一次使用后就关闭的链接为短连接.">^2</a>如此的占用系统内存，还要尽量使用长连接？</strong></p>
+<p>&emsp;&emsp;<strong>为什么长连接[^2]如此的占用系统内存，还要尽量使用长连接？</strong></p>
 <ol>
-<li>建立连接的过程<a href="1.客户端加载驱动2.客户端根据配置发起链接3.MySQL服务端验证用户信息4.MySQL建立成功连接5.MySQL服务端鉴权并返回相关的权限信息6.客户端每次请求带上权限信息">^3</a>通常是比较复杂的，所以我建议你在使用中要尽量减少建立连接的动作，也就是尽量使用长连接。</li>
+<li>建立连接的过程[^3]通常是比较复杂的，所以我建议你在使用中要尽量减少建立连接的动作，也就是尽量使用长连接。</li>
 <li>长连接可以被监控，可以手动断开高内存占用的链接</li>
 </ol>
 <p>&emsp;&emsp;<strong>既然长连接优于短连接，那么如何解决长连接带来的弊端呢？</strong></p>
@@ -554,8 +554,8 @@
 <li>对于表的操作权限验证在哪里进行?</li>
 <li>执行器的执行查询语句的流程是什么样的? </li>
 </ol>
-<hr>
-<p>[^1]:Out Of Memory.</p>
+<p>[^1]:Out Of Memory<br>[^2]:我称之能够被大量复用的连接为长连接，很少或一次使用后就关闭的链接为短连接<br>[^3]:1.客户端加载驱动2.客户端根据配置发起链接3.MySQL服务端验证用户信息4.MySQL建立成功连接5.MySQL服务端鉴权并返回相关的权限信息6.客户端每次请求带上权限信息</p>
+<p><strong>注解问题恶心到我了，暂时就这样吧，还原指正</strong></p>
 
       
     </div>
@@ -632,7 +632,7 @@
   <p><span>本文标题:</span><a href="/2019/05/21/一条SQL查询语句是如何执行的？/">一条SQL查询语句是如何执行的？</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Yiquan Mou 的个人博客">Yiquan Mou</a></p>
   <p><span>发布时间:</span>2019年05月21日 - 09:05</p>
-  <p><span>最后更新:</span>2019年05月21日 - 17:05</p>
+  <p><span>最后更新:</span>2019年05月21日 - 18:05</p>
   <p><span>原始链接:</span><a href="/2019/05/21/一条SQL查询语句是如何执行的？/" title="一条SQL查询语句是如何执行的？">https://mouyiquan.github.io/2019/05/21/一条SQL查询语句是如何执行的？/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://mouyiquan.github.io/2019/05/21/一条SQL查询语句是如何执行的？/" aria-label="复制成功！"></i></span>
   </p>
